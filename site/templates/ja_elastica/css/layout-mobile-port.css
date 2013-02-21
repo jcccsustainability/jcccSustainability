@@ -1,0 +1,8 @@
+/* * ------------------------------------------------------------------------
+ * JA Elastica Template for Joomla 2.5
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------*//* MASONRY PRESETS (240px*5 Grids)--------------------------------------------------------- *//* Sizes---*/.ja-masonry,.grid-double,.grid-tripple,#ja-header .main,#ja-content,.item {  float: none !important;  width: 100% !important;}#contact-form dl dd input.required,#contact-form dl dd textarea.required {  width: 90% !important;}

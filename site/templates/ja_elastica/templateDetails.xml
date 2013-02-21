@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	method="upgrade">
+	<name>ja_elastica</name>
+	<version>2.5.2</version>
+	<creationDate>September 2012</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.joomlart.com</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description><![CDATA[
+<p>Joomlart broke new ground in the Joomla! community by unveiling <strong>JA Elastica</strong>, the <strong>FIRST</strong> Joomla! template with a <strong>Responsive Web Design and as our gift to the community, we offer it FREE! for all. Support forums are however restrcited to paid active members only.</strong> </p>
+
+<p>JA Elastica truly is one template to serve all.  With its exclusive Responsive coding, JA Elastica adapts and transforms to fit the screen area of any device - be it a 30 inch extra wide monitor to the smallest iPhone screen.
+
+<p>The template uses the <a href=”http://masonry.desandro.com/”>jQuery Masonry script</a>.
+<p>This template does not support RTL CSS style</p>
+
+<p><strong>Resources :</strong></p>
+
+<p>|
+<a href='http://www.joomlart.com/joomla/templates/ja-elastica' title='Home' target='_blank' > Template Home Page</a> |
+<a href='http://www.joomlart.com/demo/#joomla25-templates.joomlart.com/ja_elastica' title='Demo' target='_blank' > Demo</a> |
+<a href='http://www.joomlart.com/forums/forumdisplay.php?339' title='forum' target='_blank' >Forum</a> |
+<a href='http://wiki.joomlart.com/wiki/JA_Elastica/Overview' title='forum' target='_blank' >Documentation</a> |</p>
+<p>
+<a href='http://wiki.joomlart.com/wiki/JA_T3_Framework_2/Overview' title='T3 wiki' target='_blank' >T3 Framework Wiki</a> |
+<a href='http://update.joomlart.com' title='Updates' target='_blank' >Updates</a> |
+<a href='http://pm.joomlart.com/browse/JATCELASTICAJ17' title='Changelog' target='_blank' >JIRA</a> |
+<a href='http://www.joomlart.com/forums/downloads.php?do=cat&id=20433' title='Downloads' target='_blank' >Downloads</a> |
+</p>
+		]]></description>
+	<engine>t3</engine>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>info.xml</filename>
+		<filename>params.ini</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>blocks</folder>
+		<folder>etc</folder>
+		<folder>themes</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>info</folder>
+		<folder>js</folder>
+		<folder>page</folder>
+		<filename>offline.php</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+   	 <language tag="en-GB">en-GB/en-GB.tpl_ja_elastica.ini</language>
+   	 <language tag="en-GB">en-GB/en-GB.tpl_ja_elastica.sys.ini</language>
+    </languages>
+
+	<positions>
+		<position>hornav</position>
+		<position>breadcrumbs</position>
+		<position>search</position>
+		<position>banner</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>user5</position>
+		<position>user6</position>
+		<position>user7</position>
+		<position>user8</position>
+		<position>user9</position>
+		<position>user10</position>
+		<position>user11</position>
+		<position>footer</position>
+		<position>syndicate</position>
+		<position>debug</position>
+		<position>mega1</position>
+		<position>mega2</position>
+		<position>top-panel</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/jat3/jat3/core/element">
+			<fieldset name="EXTRA_SETTING" label="Extra Settings">
+				<field name="group_disable" type="japaramhelpert3" function="@group">
+					<option for="all" value="hide" hideRow="true">setting_screen, setting_direction</option>
+					<option for="all" value="disable" hideRow="false">setting_menu, iphone_layout, handheld_layout, android_layout</option>
+				</field>
+			</fieldset>
+		</fields>
+    </config>
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout name="desktop">
+	<!--Extra css load for this layout-->
+	<stylesheets>
+		<file media="all">css/layout.css</file>
+		<file media="all">css/template.css</file>
+		<file media="all">css/modules.css</file>
+		<file media="only screen and (max-width:719px)">css/layout-mobile.css</file>
+		<file media="only screen and (max-width:479px)">css/layout-mobile-port.css</file>
+		<file media="only screen and (min-width:720px) and (max-width: 985px)">css/layout-tablet.css</file>
+		<file media="only screen and (min-width:986px) and (max-width: 1235px)">css/layout-normal.css</file>
+		<file media="only screen and (min-width:1236px)">css/layout-wide.css</file>
+	</stylesheets>
+	<scripts>
+		<file>js/mega.rjd.js</file>
+		<file>js/jquery/jquery-1.6.4.min.js</file>
+		<file>js/jquery.masonry.js</file>
+		<file>js/jquery.mediaqueries.js</file>
+		<content>jQuery.noConflict();</content>
+	</scripts>
+	<blocks name="top" style="xhtml">
+		<block name="header" type="header" main-inner="1"></block>
+	</blocks>
+	<blocks name="middle">
+		<block name="right1">position-7, position-5</block>
+		<block name="right2" type="extra-col">extra-col</block>
+	</blocks>
+	<blocks name="bottom" style="xhtml">
+		<block name="footer" type="footer"></block>
+		<block name="masonry" type="masonry" no-wrap="1" no-main="1"></block>
+	</blocks>
+</layout>

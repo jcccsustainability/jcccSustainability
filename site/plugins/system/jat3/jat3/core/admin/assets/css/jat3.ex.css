@@ -1,0 +1,321 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA T3v2 System Plugin
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+/* joomla 3.0----*/
+select, textarea, input[type="text"], 
+input[type="password"], input[type="datetime"], 
+input[type="datetime-local"], input[type="date"], 
+input[type="month"], input[type="time"], input[type="week"], 
+input[type="number"], input[type="email"], input[type="url"], 
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	line-height: normal !important;
+	height: auto !important; 
+	padding: 2px !important;
+}
+
+.tab-content input, .tab-content select, .tab-content textarea,
+#tab-content input, #tab-content select, #tab-content textarea {
+	font-size: 12px !important;
+}
+
+fieldset.adminform fieldset.radio label, fieldset.panelform fieldset.radio label {
+	float: left;
+	width: 10% !important;
+	min-width: 60px;
+}
+
+.close {
+	opacity: 1 !important;
+	filter: alpha(opacity=100) !important;
+}
+
+#details.active,
+#assignment.active {
+	background: #fff !important;
+}
+
+.ja-tabswrap {
+	width: 98%;
+	margin-left: 25px;
+}
+#ja-tabswrap {
+	width: 100%;
+}
+
+#options {
+	position: relative;
+}
+
+.ja-tabs-title-top {
+	width: 99%;
+}
+
+.ja-tabswrap div.ja-tab-subcontent {
+	font-size: 12px !important;
+}
+
+.ja-tabswrap div.ja-tab-subcontent h3{
+	font-size: 100%;
+}
+
+.ja-tabswrap div.ja-tab-subcontent h3 a {
+	color: #025A8D;
+}
+
+.ja-layout-settings {
+	margin-top: 5px !important;
+}
+
+.ja-tab-subcontent input[type="radio"],
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+	float: left;
+	margin: 0px 5px 5px 0 !important;
+	width: auto;
+}
+
+.ja-tab-subcontent .icon-help, 
+.ja-tab-subcontent .paramlist_value .block-head .icon-help,
+#ja-head-page-settings .icon-help{
+	background: url("../../../admin/assets/images/help-hover.png") no-repeat right center !important;
+}
+
+.ja-tab-subcontent .icon-help:before,
+#ja-head-page-settings .icon-help:before {
+	content= "";
+	display: none;
+}
+
+#ja-layout-container #content_layout {
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin-bottom: 0px !important; 
+	padding: 0px !important;
+	height: 315px !important;
+}
+
+#ja-layout-container li.cancel,
+#ja-layout-container li.save {
+	background-position: left 3px !important;
+}
+
+select#ja-language {
+	width: 70px !important;
+	margin-bottom: 0px !important;
+	padding-top: 1px !important;
+	padding-right: 1px !important;
+	height: auto !important;
+	line-height: auto !important;
+}
+
+table.admintable td.paramlist_key label {
+	display: inline-block !important;
+}
+
+.ja-tabswrap div.ja-tab-subcontent h3 {
+	margin: 0px !important;
+}
+.ja-tab-subcontent ul.ja-general-titles, 
+#ja-profiles-content ul.ja-profile-titles {
+	padding-bottom: 0px !important;
+	padding-top: 7px !important;
+}
+
+/* Table ---*/
+
+.paramlist td.paramlist_value fieldset {
+	display: inline-block !important;
+}
+
+.paramlist td.paramlist_value fieldset input[type="radio"] {
+	margin-top: 2px !important;
+}
+
+fieldset.radio {
+	padding-left: 0px !important;
+}
+
+
+table.admintable td.paramlist_key {
+	width: 40% !important ;
+	padding: 5px 0px !important
+}
+
+table.admintable td.paramlist_value {
+	width: 60% !important ;
+	padding: 5px 0px !important;
+	clear: left;
+}
+
+.ja-layout-settings table.adminform td {
+	padding: 10px 4px 0px 4px !important;
+}
+
+.ja-layout-settings tr td label {
+	margin-top: 0px !important;
+}
+
+/* Tabs Style ----*/
+.ja-tabswrap div.ja-tab-content {
+	background: #fff !important;
+}
+
+.default .ja-tabs-title-top ul.ja-tabs-title li h3{
+	font-size: 87% !important; 
+	line-height: 26px !important;
+	vertical-align: middle;
+}
+
+.block-head.close, .paramlist_value .block-head.close {
+	float: none;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+span.cb-span {
+	width: 15px !important;
+	height: 15px !important;
+	background: url("../images/icon-tick.png") no-repeat !important;
+	cursor: pointer;
+	margin: 0px 3px 0px 0px !important; 
+	padding: 0px !important;	
+	float: right !important;
+	min-height: 15px !important;
+}
+
+span.cb-span-checked { background-position: 0px -36px  !important; }
+
+input#install_package{
+	height: auto;
+	line-height: normal;
+}
+/* Page assignment ---*/
+#ja-page-assignment {
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+
+div.ja-popup-pageids div.pages{
+	font-size: .95em !important;
+}
+
+#page-assignment-list li label {
+	display: inline-block !important;
+	font-weight: normal;
+	font-size: .90em !important;
+}
+
+#page-assignment-list li input {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+div.ja-popup-pageids div.language {
+	margin-bottom: 1px !important;
+}
+
+#pages_profile-ja-popup-pageids {
+	border-top: none !important;
+}
+
+@-moz-document url-prefix() {
+	border-top: 1px solid #DDD !important;
+}
+
+/* Themes setting ---*/
+ul.ja-popup-themes {
+	width: 200px !important;
+}
+
+
+/* Tool Tip ----*/
+.tip-wrap {
+	background: none !important;
+	color: #333 !important;
+	text-align: left !important;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	max-width: 400px !important;
+}
+
+.tip {
+	background: #ffc;
+	border: 1px solid #D4D5AA !important;
+	padding: 5px;
+}
+
+.tip-title {
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../images/selector-arrow.png) no-repeat;
+}
+
+.gfont-title label {
+	width: auto !important;
+}
+
+a.gfont-help {
+	margin-top: 3px !important;
+}
+
+.gfont-control input[type="checkbox"] {
+	border: none !important; 
+	margin-right: 3px !important;
+}
+
+input.notshowagain{
+	float: left !important;
+	display: inline-block;
+	padding: 0px !important; 
+	margin: 0px 4px 0px 0px !important;
+	border: none !important;
+}
+/* Help ---*/
+#ja-icon-help {
+	top: 17px;
+	left: 2px;
+	z-index: 10 !important;
+}
+
+.tool .mid3 {
+	padding-right: 1px !important;
+}
+#jat3-help-content {
+	left: 26px !important;
+}
+
+#jat3-help-content.tool .mid3 .tool-text-content {
+	background: url("../images/arrow_l.png") no-repeat left center !important;
+	margin-right: 0px !important;
+	margin-left: -24px;
+	padding-right: 0px !important; 
+	padding-left: 30px !important;
+}
+
+#jat3-help-content.tool .profiles .mid3 .tool-text-content {
+	background: url("../images/arrow-red_l.png") no-repeat left center !important;
+}
+
+#jat3-help-content.tool .layouts .mid3 .tool-text-content {
+	background: url("../images/arrow-orange_l.png") no-repeat left center !important;
+}
+
+#jat3-help-content.tool .themes .mid3 .tool-text-content {
+	background: url("../images/arrow-blue_l.png") no-repeat left center !important;
+}
+
+#jat3-help-content.tool .mid3 .tool-text {
+	width: auto !important;
+}

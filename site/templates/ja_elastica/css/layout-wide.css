@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Elastica Template for Joomla 2.5
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+*/
+
+/* RESPONSIVE FONT SIZES
+--------------------------------------------------------- */
+body.fs1 #ja-wrapper {
+  font-size: 1.1em !important;
+}
+
+body.fs2 #ja-wrapper {
+  font-size: 1.2em !important;
+}
+
+body.fs3 #ja-wrapper {
+  font-size: 1.3em !important;
+}
+
+body.fs4 #ja-wrapper {
+  font-size: 1.4em !important;
+}
+
+body.fs5 #ja-wrapper {
+  font-size: 1.5em !important;
+}
+
+body.fs6 #ja-wrapper {
+  font-size: 1.6em !important;
+}
+
+/* MAIN LAYOUT DIVS
+--------------------------------------------------------- */
+.main {
+  width: 1200px;
+}
+
+/* MASONRY PRESETS (240px*5 Grids)
+--------------------------------------------------------- */
+
+/* CONTENT'S GRIDS
+--------------------------------------------------------- */
+.item {
+  float: none;
+  width: 100% !important;
+}
+
+.cols-1 .item,
+.cols-2 .item,
+.cols-3 .item,
+.cols-4 .item,
+.cols-5 .item {
+  width: 100% !important;
+}
+
+/* HEADER
+--------------------------------------------------------- */
+#ja-header {
+}
+
+/* FOOTER
+--------------------------------------------------------- */
+#ja-footer {
+}
+
+/* MAIN NAVIGATION 
+--------------------------------------------------------- */
+/* Main Nav ---*/
+#ja-mainnav {
+  max-width: 754px;
+}
+
+/* hide menu button in wide screen */
+#ja-menu-button {
+  display: none;
+}

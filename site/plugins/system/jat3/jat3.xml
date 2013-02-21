@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+	version="2.5" 
+	type="plugin" 
+	group="system"
+	method="upgrade">
+	<name>JA T3 Framework</name>
+	<author>www.JoomlArt.com</author>
+	<creationDate>October 31 2012</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.joomlart.com</authorUrl>
+	<version>2.5.6</version>
+	<scriptfile>install.php</scriptfile>
+	<updateservers>
+	    <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+	<description>
+	<![CDATA[
+		<h1>T3 Framework - JoomlArt Template Framework for Joomla 2.5</h1>
+		<div style='font-weight: normal'>
+		<p><span style='color: #ff6600;'>
+		<strong>Features:</strong></span>
+		This plugin is required for JA T3 Framework based templates to work.</p>
+		
+		<strong><span style='color: #ff0000;'>Usage Instruction:</span></strong><br />
+		<ul>
+		<li>Enable the JA T3 plugin in Plugin manager</li>
+		</ul>
+		<strong><span style='color: #ff0000;'>Upgrade Method:</span><br /></strong>
+		<ul>
+		  <li>You can install new version directly over this version. Uninstallation is not required. </li>
+		  <li>Follow upgrade instructions and backup site / plugin before upgrading</li>
+		  </ul>
+	
+		<span style='color: #008000;'><strong>Links:</strong></span><br />
+		<ul>
+		<li><a target="_blank" href="http://wiki.joomlart.com/wiki/JA_T3_Framework_2/Overview">Wiki Userguide</a></li>
+		 <li><a target='_blank' href='http://update.joomlart.com/'>Updates &amp; Versions</a></li>
+		 <li><a target='_blank' href='http://www.joomlart.com/forums/forumdisplay.php?241'>JA T3 Framework Forum</a></li>
+		</ul>
+		<p>Copyright 2004 - 2012 <a href='http://www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
+		</div>
+		]]>
+		</description>	
+	<files>
+		<folder plugin="jat3">jat3</folder>
+		<filename plugin="jat3">jat3.php</filename>
+        <filename plugin="jat3">index.html</filename>
+	</files>	
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_jat3.ini</language>
+    </languages>		
+</extension>

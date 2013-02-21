@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Elastica Template for Joomla 2.5
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+*/
+
+/* Layout Deco ---*/
+.item-page,
+.cat-children,
+.com_content .archive,
+.items-leading .leading .contentpaneopen,
+.items-row .item .contentpaneopen {
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+#ja-content-main {
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+.com_content #ja-content-main {
+  box-shadow: none;
+}
+
+#ja-footer {
+  text-shadow: 0 1px 1px #FFF;
+}
+
+.t3-logo a,
+.t3-logo-sm a {
+  opacity: .5;
+  filter:alpha(opacity=50) 
+}
+
+.t3-logo a:hover,
+.t3-logo-sm a:hover {
+  opacity: 1;
+  filter:alpha(opacity=100) 
+}
+
+
+a.ja-icon-video {
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+.ja-megamenu ul.level0 li.mega span.menu-desc {
+   opacity: .5;
+  filter:alpha(opacity=50) 
+}
+
+.ja-megamenu .childcontent .moduletable-inner {
+  box-shadow: none;
+}
+
+
+/* Typo Page ---*/
+.ja-typo-bubblect {
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+/* Common Style for Rounded Bubbles --- */
+.bubble-rounded .ja-typo-bubblect {
+	border-radius: 18px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+}
+
+/* Rounded Box*/
+.box-rounded {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px; 
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+/* Rounded Box*/
+.legend-rounded {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px; 
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+/* Common Buttons Style ---*/
+a.ja-typo-btn {
+	text-shadow: 0 1px 2px rgba(255,255,255,.8);
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+/* Common style for Dark Buttons --- */
+a.btn-blue,
+a.btn-red,
+a.btn-green,
+a.btn-orange,
+a.btn-black {
+	text-shadow: 0 1px 2px rgba(0,0,0,.8);
+}
+
+
+span.tag-grey { text-shadow: 0 -1px 0 rgba(255,255,255,.8); }
+
+/* Common style for Rounded Buttons --- */
+.btn-rounded-icn, .btn-rounded-big, .btn-rounded-sm,
+.btn-rounded-icn span, .btn-rounded-big span, .btn-rounded-sm span {
+	border-radius: 18px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px; 
+}
+
+.btn-rounded-sm, .btn-rounded-sm span {
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px; 
+}
+
+span.ja-typo-tag {
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Common style for Rounded Tags --- */
+span.tag-rounded {
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px; 
+}
+
+/* Style 2 */
+fieldset.fieldset-2 {
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px; 
+}
+
+#ja-twitter-wrap {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+}
+
+.big-quote {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+}
+
+.guide-step {
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px;
+}
+
+.img-caption p {
+	text-shadow: 1px 1px 0 #fff;
+}
+
+.ja-typo-blockswrap h2.ja-typo-title span {
+	text-shadow: 0 -1px 1px rgba(255,255,255,.8);
+}
+
+
+div.ja-moduletable-inner,
+div.moduletable-inner {
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+/* Blank Modules */
+.moduletable_blank .moduletable-inner {
+  box-shadow: none;
+}

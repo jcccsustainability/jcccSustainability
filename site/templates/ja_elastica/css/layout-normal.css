@@ -1,0 +1,193 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Elastica Template for Joomla 2.5
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+*/
+
+/* RESPONSIVE FONT SIZES
+--------------------------------------------------------- */
+
+
+/* MAIN LAYOUT DIVS
+--------------------------------------------------------- */
+.main {
+  width: 960px;
+}
+
+.column {
+}
+
+/* MASONRY PRESETS (240px*5 Grids)
+--------------------------------------------------------- */
+/* Main Content */
+#ja-content,
+.ja-frontpage #ja-content {
+  width: 480px;
+}
+
+/* CONTENT'S GRIDS
+--------------------------------------------------------- */
+.item {
+  float: none;
+  width: 100% !important;
+}
+
+.cols-1 .item,
+.cols-2 .item,
+.cols-3 .item,
+.cols-4 .item,
+.cols-5 .item {
+  width: 100% !important;
+}
+
+/* HEADER
+--------------------------------------------------------- */
+#ja-header {
+}
+
+h1.logo {
+  height: 40px !important;
+  width: 140px !important;
+}
+
+h1.logo a {
+  padding: 0 .5em !important;
+  height: 40px !important;
+}
+
+h1.logo a img {
+  padding-top: .5em;
+}
+
+/* Search & Social Bars ---*/
+#ja-top {
+  height: 40px;
+  width: 176px;
+  border-left: 1px dotted #666;
+}
+
+/* Search */
+#ja-search {
+  bottom: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  border-bottom: 0;
+}
+
+#ja-search .search-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  margin-top: 5px;
+}
+
+#ja-search.active .search-btn,
+#ja-search .search-btn:hover {
+  width: 30px;
+  height: 30px;
+  background-color: #ec534d;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#ja-search form.search {
+  display: none;
+  background: #ec534d;
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  padding: .5em;
+  width: 200px;
+}
+
+#ja-search:hover form.search,
+#ja-search.active form.search {
+  display: block !important;
+}
+
+#ja-search .inputbox {
+  background: #222;
+  border: 1px solid #222;
+  color: #CCC;
+  margin: 0;
+  padding: 4px 0;
+  text-indent: 10px;
+  width: 100%;
+}
+
+/* Social */
+#ja-social {
+  height: 40px;
+}
+
+#ja-social ul {
+  padding: 5px 0 0 1em;
+}
+
+#ja-social ul li {
+}
+
+#ja-social ul li a {
+  background-color: #222;
+}
+
+/* FOOTER
+--------------------------------------------------------- */
+#ja-footer {
+}
+
+/* MODULES
+--------------------------------------------------------- */
+/* Hiden in Mobile ---*/
+.hide-in-normal {
+  display: none;
+}
+
+/* MAIN NAVIGATION 
+--------------------------------------------------------- */
+/* Main Nav ---*/
+#ja-mainnav {
+  max-width: 615px;
+}
+
+/* Mega Menu ---*/
+.ja-megamenu ul.level0 li.mega {
+  height: 40px !important;
+}
+
+.ja-megamenu ul.level0 li.mega a.mega {
+  height: 40px !important;
+}
+
+.ja-megamenu ul.level0 li.mega span.menu-title,
+.ja-megamenu ul.level0 li.haschild span.menu-title {
+  margin-top: .75em !important;
+  padding: 0 !important;
+}
+
+.ja-megamenu ul.level1 li.mega span.menu-title {
+  margin-top: 0 !important;
+}
+
+.ja-megamenu ul.level1 li.mega {
+  height: auto !important;
+}
+
+.ja-megamenu ul.level1 li.mega a.mega {
+  height: auto !important;
+}
+
+.ja-megamenu ul.level0 li.mega span.menu-desc {
+  display: none;
+}
+
+/* hide menu button in normal screen */
+#ja-menu-button  {display: none;}

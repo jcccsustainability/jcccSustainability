@@ -1,0 +1,205 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Elastica Template for Joomla 2.5
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+*/
+
+ 
+/* MAIN LAYOUT DIVS
+--------------------------------------------------------- */
+.wrap {
+  clear: both;
+  width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  position: relative;
+  width: 1200px;
+}
+
+.column {
+  display: inline;
+  float: left;
+  overflow: hidden;
+}
+
+.ja-mass {
+  clear: both;
+}
+
+/* Gutter ---*/
+.main .inner {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.main .main-inner1 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* Reset Basetheme */
+#ja-main-wrap div.ja-moduletable,
+#ja-main-wrap div.moduletable,
+#ja-main-wrap div.ja-module,
+#ja-main-wrap div.module {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* Redefine gutter for module-inner */
+#ja-main-wrap div.ja-moduletable-inner,
+#ja-main-wrap div.moduletable-inner,
+#ja-main-wrap div.ja-module-inner,
+#ja-main-wrap div.module-inner,
+#ja-extra-col div.module-inner {
+  margin: 1em;
+}
+
+/* MASONRY PRESETS (240px*5 Grids)
+--------------------------------------------------------- */
+/* Sizes---*/
+.ja-masonry {
+  width: 240px;
+}
+
+.grid-double {
+  width: 480px;
+}
+
+.grid-tripple {
+  width: 720px;
+}
+
+.ja-masonry .custom,
+.grid-double .custom,
+.grid-tripple .custom {
+  width: auto;
+}
+
+/* Main Content */
+#ja-content {
+  width: 720px; /* 3 grids */
+}
+
+.ja-frontpage #ja-content {
+  width: 480px; /* Frontpage Content 2 grids */
+}
+
+.ja-mf #ja-content {
+  width: 100% !important; /* Full */
+}
+
+/* full 5 grids content */
+body.content-grid-mass #ja-content,
+body.content-grid-mass.ja-frontpage #ja-content {
+  width: 100% !important;
+}
+
+/* 4 grids content */
+body.content-grid-quadruple #ja-content,
+body.content-grid-quadruple.ja-frontpage #ja-content {
+  width: 960px;
+}
+
+/* 3 grids content */
+body.content-grid-tripple #ja-content,
+body.content-grid-tripple.ja-frontpage #ja-content {
+  width: 720px;
+}
+
+/* 2 grids content */
+body.content-grid-double #ja-content,
+body.content-grid-double.ja-frontpage #ja-content {
+  width: 480px;
+}
+
+/* 1 grids content */
+body.content-grid-single #ja-content,
+body.content-grid-single.ja-frontpage #ja-content {
+  width: 240px;
+}
+
+
+/* CONTENT'S GRIDS
+--------------------------------------------------------- */
+/* Items Page */
+.item-page {
+  padding: 1.5em;
+}
+
+/* Items Row */
+.items-row {
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  float: left;
+  position: relative;
+  padding: 1em 0;
+}
+
+.item .contentpaneopen {
+  padding: 1.5em;
+}
+
+/* Items Leading */
+.items-leading {
+  padding: 0;
+  margin: 0;
+}
+
+.items-leading .leading {
+  padding: 1em 0;
+}
+
+.items-leading .leading:first-child {
+  padding-top: 0;
+}
+
+.leading .contentpaneopen {
+  padding: 1.5em;
+}
+
+/* Items Grids */
+.cols-1 .item {
+  width: 100%;
+}
+
+.cols-2 .item {
+  width: 50%;
+}
+
+.cols-3 .item {
+  width: 33.33%;
+}
+
+.cols-4 .item {
+  width: 25%;
+}
+
+.cols-5 .item {
+  width: 20%;
+}
+
+/* HEADER
+--------------------------------------------------------- */
+#ja-header {
+}
+
+/* FOOTER
+--------------------------------------------------------- */
+#ja-footer {
+}
+
+/* MAIN NAVIGATION 
+--------------------------------------------------------- */
+/* hide menu button by default */
+#ja-menu-button {display: none; position: relative;}
