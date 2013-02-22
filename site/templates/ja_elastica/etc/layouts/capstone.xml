@@ -20,6 +20,7 @@
 <file>https://www.google.com/jsapi</file>
 <file>../../../capstoneFiles/js/Charts.js</file>
 <file>../../../capstoneFiles/js/homePageCharts.js</file>
+<file>../../../capstoneFiles/js/testCode.js</file>
 		<content>jQuery.noConflict();</content>
 	</scripts>
 	<blocks name="top" style="xhtml">

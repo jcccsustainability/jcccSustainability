@@ -10972,3 +10972,6 @@ DEBUG   |130222 05:43:55|*** Batching of engine steps finished. I will now retur
 DEBUG   |130222 05:43:55|Sleeping for 1937.8719329834 msec, using usleep()
 DEBUG   |130222 05:43:57|Will not save a finished Kettenrad instance
 DEBUG   |130222 05:43:57|Closing SQL dump file.
+DEBUG   |130222 05:58:01|Kettenrad :: Attempting to load from database (backend)
+DEBUG   |130222 05:58:01| -- Stored Akeeba Factory (backend) not found - hard reset
+DEBUG   |130222 05:58:02|

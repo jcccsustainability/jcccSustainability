@@ -7,7 +7,7 @@
 //runs after site has fully loaded (sort of like main... but you can have functions inside)
 //use $( "#divid") to edit the div with jQuery
 jQuery(document).ready(function($) {
-alert("rand");
+
 //pass the chart object to a function that will populat the data
 //and set options and div to be placed in
 drawChart1(new Chart('div3') );	
