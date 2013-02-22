@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system">
+	<name>Easyheader 17v23</name>
+	<author>Bob Galway</author>
+	<creationDate>February 2012</creationDate>
+	<copyright>Copyright (C) 2012 Blackdale.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>reply@blackdale.com</authorEmail>
+	<authorUrl>www.blackdale.com</authorUrl>
+	<version>17v23</version>
+	<description>EASYHEADER17V23</description>
+
+	<languages>
+
+	<language tag="en-GB">languages/en-GB.plg_system_easyheader17v23.ini</language>
+	<language tag="fr-FR">languages/fr-FR.plg_system_easyheader17v23.ini</language>
+	<language tag="de-DE">languages/de-DE.plg_system_easyheader17v23.ini</language>
+	<language tag="nl-NL">languages/nl-NL.plg_system_easyheader17v23.ini</language>
+
+	</languages>
+
+	<files>
+    <filename >gpl-3.0.txt</filename>
+		<filename plugin="easyheader17v23">easyheader17v23.php</filename>
+		<filename>index.html</filename>
+		<folder>fontimages</folder>
+	</files>
+
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="SCRIPTS">
+				<field name="ehscript1" filter="raw" type="textarea" default="" cols="20" rows="1" label="EH17V23SCRIPT1" description="EH17V23SCRIPT_DESC">
+
+				</field>
+
+			    	<field name="ehscript2" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23SCRIPT2" description="EH17V23SCRIPT_DESC">
+
+				</field>
+
+				<field name="ehscript3" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23SCRIPT3" description="EH17V23SCRIPT_DESC">
+
+				</field>
+
+				<field name="ehscript4" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23SCRIPT4" description="EH17V23SCRIPT_DESC">
+
+				</field>
+
+				<field name="ehscript5" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23SCRIPT5" description="EH17V23SCRIPT_DESC">
+
+				</field>
+
+
+				<field name="ehstyle1" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23STYLE1" description="EH17V23STYLE_DESC">
+
+				</field>
+
+				<field name="ehstyle2" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23STYLE2" description="EH17V23STYLE_DESC">
+
+				</field>
+
+				<field name="ehstyle3" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23STYLE3" description="EH17V23STYLE_DESC">
+
+				</field>
+
+				<field name="ehstyle4" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23STYLE4" description="EH17V23STYLE_DESC">
+
+				</field>
+
+				<field name="ehstyle5" type="textarea" filter="raw" default="" cols="20" rows="1" label="EH17V23STYLE5" description="EH17V23STYLE_DESC">
+
+				</field>
+
+				<field name="ehadditional" type="textarea" default="" filter="raw" cols="40" rows="8" label="EH17V23ADDITIONAL" description="EH17V23ADDITIONAL_DESC">
+
+				</field>
+
+			</fieldset>
+
+
+			<fieldset name="FRAMEWORKS">
+
+				<field name="ehfastload" type="radio" default="1" label="EH17V23SWITCH" description="EH17V23SWITCH_DESC">
+
+						<option value="1">EH17V23NO</option>
+						<option value="2">EH17V23YES</option>
+
+				</field>
+
+
+
+
+				<field name="jquery" type="radio" default="1" label="EH17V23SWITCH3" description="EH17V23SWITCH_DESC3">
+
+						<option value="1">EH17V23NO</option>
+						<option value="2">EH17V23YES</option>
+
+				</field>
+				<field name="jqueryv" type="list" default="1.7.1" label="EH17V23JQUERYV" description="EH17V23JQUERYV_DESC3">
+
+						<option value="1.6.0">1.6.0</option>
+						<option value="1.6.1">1.6.1</option>
+						<option value="1.6.2">1.6.2</option>
+						<option value="1.6.3">1.6.3</option>
+						<option value="1.6.4">1.6.4</option>
+						<option value="1.7.0">1.7.0</option>
+						<option value="1.7.1">1.7.1</option>
+						<option value="1.7.2">1.7.2</option>
+						<option value="1.8.0">1.8.0</option>
+						<option value="1.8.1">1.8.1</option>
+						<option value="1.8.2">1.8.2</option>
+						<option value="1.8.3">1.8.3</option>
+						<option value="1.9.0">1.9.0</option>						
+						
+				</field>
+
+				<field name="jqueryui" type="radio" default="1" label="EH17V23SWITCH4" description="EH17V23SWITCH_DESC4">
+
+						<option value="1">EH17V23NO</option>
+						<option value="2">EH17V23YES</option>
+
+				</field>
+						<field name="jqueryuiv" type="list" default="1.8.16" label="EH17V23JQUERYUIV" description="EH17V23JQUERYUIV_DESC3">
+
+						<option value="1.8.0">1.8.0</option>
+						<option value="1.8.1">1.8.1</option>
+						<option value="1.8.2">1.8.2</option>
+						<option value="1.8.3">1.8.3</option>
+						<option value="1.8.4">1.8.4</option>
+						<option value="1.8.5">1.8.5</option>
+						<option value="1.8.6">1.8.6</option>
+						<option value="1.8.7">1.8.7</option>
+						<option value="1.8.8">1.8.8</option>
+						<option value="1.8.9">1.8.9</option>
+						<option value="1.8.10">1.8.10</option>
+						<option value="1.8.11">1.8.11</option>
+						<option value="1.8.12">1.8.12</option>
+						<option value="1.8.13">1.8.13</option>
+						<option value="1.8.14">1.8.14</option>
+						<option value="1.8.15">1.8.15</option>
+						<option value="1.8.16">1.8.16</option>
+						<option value="1.8.20">1.8.20</option>
+						<option value="1.8.21">1.8.21</option>
+						<option value="1.8.22">1.8.22</option>
+						<option value="1.8.23">1.8.23</option>
+						<option value="1.8.24">1.8.24</option>
+						<option value="1.9.0">1.9.0</option>
+						<option value="1.9.1">1.9.1</option>
+						<option value="1.9.2">1.9.2</option>
+						<option value="1.10.0">1.10.0</option>
+						
+						
+				</field>
+
+			</fieldset>
+
+
+
+			<fieldset name="FONTS">
+				<field name="fontnote" type="spacer" label="EH17V23_NOTE" />
+				
+				<field name="select" type="radio" default="" label="EH17V23SERIF" description=""></field>
+
+				<field name="serif1" type="list" default="" label="EH17V23SERIF1" description="EH17V23SERIF_DESC">
+				<option value="">EH17V23NONE</option>
+					<option value="Kotta One">Kotta One</option>
+					<option value="Glegoo">Glegoo</option>
+					<option value="Amethysta">Amethysta</option>
+					<option value="Junge">Junge</option>
+					<option value="Lustria">Lustria</option>
+					<option value="Alegreya SC">Alegreya SC</option>
+					<option value="Montaga">Montaga</option>
+					<option value="Lusitana">Lusitana</option>
+					<option value="Esteban">Esteban</option>
+					<option value="Cambo">Cambo</option>
+					<option value="Inika">Inika</option>
+					<option value="Lora">Lora</option>
+					<option value="Habibi">Habibi</option>
+					<option value="Almendra">Almendra</option>
+					<option value="Almendra SC">Almendra SC</option>
+					<option value="Crete Round">Crete Round</option>
+					<option value="Bitter">Bitter</option>
+					<option value="Belgrano">Belgrano</option>
+					<option value="Stoke">Stoke</option>
+					<option value="Enriqueta">Enriqueta</option>
+					<option value="Mate SC">Mate SC</option>
+					<option value="Trykker">Trykker</option>
+					<option value="Alike Angular">Alike Angular</option>
+					<option value="Buenard">Buenard</option>
+					<option value="Arapey">Arapey</option>
+					<option value="Balthazar">Balthazar</option>
+					<option value="Brawler">Brawler</option>
+					<option value="Droid Serif">Droid Serif</option>
+					<option value="Gentium Book Basic">Gentium Book Basic</option>
+					<option value="Caudex">Caudex</option>
+					<option value="Playfair Display">Playfair Display</option>
+					<option value="Mate">Mate</option>
+					<option value="Judson">Judson</option>
+					<option value="Radley">Radley</option>
+					<option value="IM Fell Great Primer">IM Fell Great Primer</option>
+					<option value="Gentium Basic">Gentium Basic</option>
+					<option value="Ultra">Ultra</option>
+					<option value="Prata">Prata</option>
+					<option value="Holtwood One SC">Holtwood One SC</option>
+					<option value="Kameron">Kameron</option>
+					<option value="Fanwood Text">Fanwood Text</option>
+					<option value="Alike">Alike</option>
+					<option value="Bentham">Bentham</option>
+					<option value="Artifika">Artifika</option>
+					<option value="Marko One">Marko One</option>
+					<option value="Crimson Text">Crimson Text</option>
+					<option value="IM Fell French Canon SC">IM Fell French Canon SC</option>
+					<option value="IM Fell DW Pica SC">IM Fell DW Pica SC</option>
+					<option value="Coustard">Coustard</option>
+					<option value="Sorts Mill Goudy">Sorts Mill Goudy</option>
+					<option value="Quattrocento">Quattrocento</option>
+					<option value="Noticia Text">Noticia Text</option>
+					<option value="PT Serif Caption">PT Serif Caption</option>
+					<option value="Vidaloka">Vidaloka</option>
+					<option value="IM Fell Double Pica">IM Fell Double Pica</option>
+					<option value="IM Fell English SC">IM Fell English SC</option>
+					<option value="Fjord One">Fjord One</option>
+					<option value="Linden Hill">Linden Hill</option>
+					<option value="Copse">Copse</option>
+					<option value="PT Serif">PT Serif</option>
+					<option value="Rokkitt">Rokkitt</option>
+					<option value="IM Fell French Canon">IM Fell French Canon</option>
+					<option value="IM Fell Great Primer SC">IM Fell Great Primer SC</option>
+					<option value="Ovo">Ovo</option>
+					<option value="Old Standard TT">Old Standard TT</option>
+					<option value="Kreon">Kreon</option>
+					<option value="Andada">Andada</option>
+					<option value="Unna">Unna</option>
+					<option value="Merriweather">Merriweather</option>
+					<option value="Alice">Alice</option>
+					<option value="Petrona">Petrona</option>
+					<option value="Adamina">Adamina</option>
+					<option value="Vollkorn">Vollkorn</option>
+					<option value="Bevan">Bevan</option>
+					<option value="Tienne">Tienne</option>
+					<option value="Volkhov">Volkhov</option>
+					<option value="Goudy Bookletter 1911">Goudy Bookletter 1911</option>
+					<option value="Cardo">Cardo</option>
+					<option value="Neuton">Neuton</option>
+					<option value="EB Garamond">EB Garamond</option>
+					<option value="IM Fell DW Pica">IM Fell DW Pica</option>
+					<option value="IM Fell English">IM Fell English</option>
+					<option value="Prociono">Prociono</option>
+					<option value="Arvo">Arvo</option>
+					<option value="Tinos">Tinos</option>
+					<option value="IM Fell Double Pica SC">IM Fell Double Pica SC</option>
+					<option value="Poly">Poly</option>
+					<option value="Josefin Slab">Josefin Slab</option>
+					<option value="Podkova">Podkova</option>
+					<option value="Bree Serif">Bree Serif</option>
+
+				</field>	
+
+				
+
+
+				<field name="serif2" type="list" default="" label="EH17V23SERIF2" description="EH17V23SERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Kotta One">Kotta One</option>
+					<option value="Glegoo">Glegoo</option>
+					<option value="Amethysta">Amethysta</option>
+					<option value="Junge">Junge</option>
+					<option value="Lustria">Lustria</option>
+					<option value="Alegreya SC">Alegreya SC</option>
+					<option value="Montaga">Montaga</option>
+					<option value="Lusitana">Lusitana</option>
+					<option value="Esteban">Esteban</option>
+					<option value="Cambo">Cambo</option>
+					<option value="Inika">Inika</option>
+					<option value="Lora">Lora</option>
+					<option value="Habibi">Habibi</option>
+					<option value="Almendra">Almendra</option>
+					<option value="Almendra SC">Almendra SC</option>
+					<option value="Crete Round">Crete Round</option>
+					<option value="Bitter">Bitter</option>
+					<option value="Belgrano">Belgrano</option>
+					<option value="Stoke">Stoke</option>
+					<option value="Enriqueta">Enriqueta</option>
+					<option value="Mate SC">Mate SC</option>
+					<option value="Trykker">Trykker</option>
+					<option value="Alike Angular">Alike Angular</option>
+					<option value="Buenard">Buenard</option>
+					<option value="Arapey">Arapey</option>
+					<option value="Balthazar">Balthazar</option>
+					<option value="Brawler">Brawler</option>
+					<option value="Droid Serif">Droid Serif</option>
+					<option value="Gentium Book Basic">Gentium Book Basic</option>
+					<option value="Caudex">Caudex</option>
+					<option value="Playfair Display">Playfair Display</option>
+					<option value="Mate">Mate</option>
+					<option value="Judson">Judson</option>
+					<option value="Radley">Radley</option>
+					<option value="IM Fell Great Primer">IM Fell Great Primer</option>
+					<option value="Gentium Basic">Gentium Basic</option>
+					<option value="Ultra">Ultra</option>
+					<option value="Prata">Prata</option>
+					<option value="Holtwood One SC">Holtwood One SC</option>
+					<option value="Kameron">Kameron</option>
+					<option value="Fanwood Text">Fanwood Text</option>
+					<option value="Alike">Alike</option>
+					<option value="Bentham">Bentham</option>
+					<option value="Artifika">Artifika</option>
+					<option value="Marko One">Marko One</option>
+					<option value="Crimson Text">Crimson Text</option>
+					<option value="IM Fell French Canon SC">IM Fell French Canon SC</option>
+					<option value="IM Fell DW Pica SC">IM Fell DW Pica SC</option>
+					<option value="Coustard">Coustard</option>
+					<option value="Sorts Mill Goudy">Sorts Mill Goudy</option>
+					<option value="Quattrocento">Quattrocento</option>
+					<option value="Noticia Text">Noticia Text</option>
+					<option value="PT Serif Caption">PT Serif Caption</option>
+					<option value="Vidaloka">Vidaloka</option>
+					<option value="IM Fell Double Pica">IM Fell Double Pica</option>
+					<option value="IM Fell English SC">IM Fell English SC</option>
+					<option value="Fjord One">Fjord One</option>
+					<option value="Linden Hill">Linden Hill</option>
+					<option value="Copse">Copse</option>
+					<option value="PT Serif">PT Serif</option>
+					<option value="Rokkitt">Rokkitt</option>
+					<option value="IM Fell French Canon">IM Fell French Canon</option>
+					<option value="IM Fell Great Primer SC">IM Fell Great Primer SC</option>
+					<option value="Ovo">Ovo</option>
+					<option value="Old Standard TT">Old Standard TT</option>
+					<option value="Kreon">Kreon</option>
+					<option value="Andada">Andada</option>
+					<option value="Unna">Unna</option>
+					<option value="Merriweather">Merriweather</option>
+					<option value="Alice">Alice</option>
+					<option value="Petrona">Petrona</option>
+					<option value="Adamina">Adamina</option>
+					<option value="Vollkorn">Vollkorn</option>
+					<option value="Bevan">Bevan</option>
+					<option value="Tienne">Tienne</option>
+					<option value="Volkhov">Volkhov</option>
+					<option value="Goudy Bookletter 1911">Goudy Bookletter 1911</option>
+					<option value="Cardo">Cardo</option>
+					<option value="Neuton">Neuton</option>
+					<option value="EB Garamond">EB Garamond</option>
+					<option value="IM Fell DW Pica">IM Fell DW Pica</option>
+					<option value="IM Fell English">IM Fell English</option>
+					<option value="Prociono">Prociono</option>
+					<option value="Arvo">Arvo</option>
+					<option value="Tinos">Tinos</option>
+					<option value="IM Fell Double Pica SC">IM Fell Double Pica SC</option>
+					<option value="Poly">Poly</option>
+					<option value="Josefin Slab">Josefin Slab</option>
+					<option value="Podkova">Podkova</option>
+					<option value="Bree Serif">Bree Serif</option>
+
+				</field>
+
+				<field name="serif3" type="list" default="" label="EH17V23SERIF3" description="EH17V23SERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Kotta One">Kotta One</option>
+					<option value="Glegoo">Glegoo</option>
+					<option value="Amethysta">Amethysta</option>
+					<option value="Junge">Junge</option>
+					<option value="Lustria">Lustria</option>
+					<option value="Alegreya SC">Alegreya SC</option>
+					<option value="Montaga">Montaga</option>
+					<option value="Lusitana">Lusitana</option>
+					<option value="Esteban">Esteban</option>
+					<option value="Cambo">Cambo</option>
+					<option value="Inika">Inika</option>
+					<option value="Lora">Lora</option>
+					<option value="Habibi">Habibi</option>
+					<option value="Almendra">Almendra</option>
+					<option value="Almendra SC">Almendra SC</option>
+					<option value="Crete Round">Crete Round</option>
+					<option value="Bitter">Bitter</option>
+					<option value="Belgrano">Belgrano</option>
+					<option value="Stoke">Stoke</option>
+					<option value="Enriqueta">Enriqueta</option>
+					<option value="Mate SC">Mate SC</option>
+					<option value="Trykker">Trykker</option>
+					<option value="Alike Angular">Alike Angular</option>
+					<option value="Buenard">Buenard</option>
+					<option value="Arapey">Arapey</option>
+					<option value="Balthazar">Balthazar</option>
+					<option value="Brawler">Brawler</option>
+					<option value="Droid Serif">Droid Serif</option>
+					<option value="Gentium Book Basic">Gentium Book Basic</option>
+					<option value="Caudex">Caudex</option>
+					<option value="Playfair Display">Playfair Display</option>
+					<option value="Mate">Mate</option>
+					<option value="Judson">Judson</option>
+					<option value="Radley">Radley</option>
+					<option value="IM Fell Great Primer">IM Fell Great Primer</option>
+					<option value="Gentium Basic">Gentium Basic</option>
+					<option value="Ultra">Ultra</option>
+					<option value="Prata">Prata</option>
+					<option value="Holtwood One SC">Holtwood One SC</option>
+					<option value="Kameron">Kameron</option>
+					<option value="Fanwood Text">Fanwood Text</option>
+					<option value="Alike">Alike</option>
+					<option value="Bentham">Bentham</option>
+					<option value="Artifika">Artifika</option>
+					<option value="Marko One">Marko One</option>
+					<option value="Crimson Text">Crimson Text</option>
+					<option value="IM Fell French Canon SC">IM Fell French Canon SC</option>
+					<option value="IM Fell DW Pica SC">IM Fell DW Pica SC</option>
+					<option value="Coustard">Coustard</option>
+					<option value="Sorts Mill Goudy">Sorts Mill Goudy</option>
+					<option value="Quattrocento">Quattrocento</option>
+					<option value="Noticia Text">Noticia Text</option>
+					<option value="PT Serif Caption">PT Serif Caption</option>
+					<option value="Vidaloka">Vidaloka</option>
+					<option value="IM Fell Double Pica">IM Fell Double Pica</option>
+					<option value="IM Fell English SC">IM Fell English SC</option>
+					<option value="Fjord One">Fjord One</option>
+					<option value="Linden Hill">Linden Hill</option>
+					<option value="Copse">Copse</option>
+					<option value="PT Serif">PT Serif</option>
+					<option value="Rokkitt">Rokkitt</option>
+					<option value="IM Fell French Canon">IM Fell French Canon</option>
+					<option value="IM Fell Great Primer SC">IM Fell Great Primer SC</option>
+					<option value="Ovo">Ovo</option>
+					<option value="Old Standard TT">Old Standard TT</option>
+					<option value="Kreon">Kreon</option>
+					<option value="Andada">Andada</option>
+					<option value="Unna">Unna</option>
+					<option value="Merriweather">Merriweather</option>
+					<option value="Alice">Alice</option>
+					<option value="Petrona">Petrona</option>
+					<option value="Adamina">Adamina</option>
+					<option value="Vollkorn">Vollkorn</option>
+					<option value="Bevan">Bevan</option>
+					<option value="Tienne">Tienne</option>
+					<option value="Volkhov">Volkhov</option>
+					<option value="Goudy Bookletter 1911">Goudy Bookletter 1911</option>
+					<option value="Cardo">Cardo</option>
+					<option value="Neuton">Neuton</option>
+					<option value="EB Garamond">EB Garamond</option>
+					<option value="IM Fell DW Pica">IM Fell DW Pica</option>
+					<option value="IM Fell English">IM Fell English</option>
+					<option value="Prociono">Prociono</option>
+					<option value="Arvo">Arvo</option>
+					<option value="Tinos">Tinos</option>
+					<option value="IM Fell Double Pica SC">IM Fell Double Pica SC</option>
+					<option value="Poly">Poly</option>
+					<option value="Josefin Slab">Josefin Slab</option>
+					<option value="Podkova">Podkova</option>
+					<option value="Bree Serif">Bree Serif</option>
+
+				</field>
+
+				
+
+
+				<field name="serif4" type="list" default="" label="EH17V23SERIF4" description="EH17V23SERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Kotta One">Kotta One</option>
+					<option value="Glegoo">Glegoo</option>
+					<option value="Amethysta">Amethysta</option>
+					<option value="Junge">Junge</option>
+					<option value="Lustria">Lustria</option>
+					<option value="Alegreya SC">Alegreya SC</option>
+					<option value="Montaga">Montaga</option>
+					<option value="Lusitana">Lusitana</option>
+					<option value="Esteban">Esteban</option>
+					<option value="Cambo">Cambo</option>
+					<option value="Inika">Inika</option>
+					<option value="Lora">Lora</option>
+					<option value="Habibi">Habibi</option>
+					<option value="Almendra">Almendra</option>
+					<option value="Almendra SC">Almendra SC</option>
+					<option value="Crete Round">Crete Round</option>
+					<option value="Bitter">Bitter</option>
+					<option value="Belgrano">Belgrano</option>
+					<option value="Stoke">Stoke</option>
+					<option value="Enriqueta">Enriqueta</option>
+					<option value="Mate SC">Mate SC</option>
+					<option value="Trykker">Trykker</option>
+					<option value="Alike Angular">Alike Angular</option>
+					<option value="Buenard">Buenard</option>
+					<option value="Arapey">Arapey</option>
+					<option value="Balthazar">Balthazar</option>
+					<option value="Brawler">Brawler</option>
+					<option value="Droid Serif">Droid Serif</option>
+					<option value="Gentium Book Basic">Gentium Book Basic</option>
+					<option value="Caudex">Caudex</option>
+					<option value="Playfair Display">Playfair Display</option>
+					<option value="Mate">Mate</option>
+					<option value="Judson">Judson</option>
+					<option value="Radley">Radley</option>
+					<option value="IM Fell Great Primer">IM Fell Great Primer</option>
+					<option value="Gentium Basic">Gentium Basic</option>
+					<option value="Ultra">Ultra</option>
+					<option value="Prata">Prata</option>
+					<option value="Holtwood One SC">Holtwood One SC</option>
+					<option value="Kameron">Kameron</option>
+					<option value="Fanwood Text">Fanwood Text</option>
+					<option value="Alike">Alike</option>
+					<option value="Bentham">Bentham</option>
+					<option value="Artifika">Artifika</option>
+					<option value="Marko One">Marko One</option>
+					<option value="Crimson Text">Crimson Text</option>
+					<option value="IM Fell French Canon SC">IM Fell French Canon SC</option>
+					<option value="IM Fell DW Pica SC">IM Fell DW Pica SC</option>
+					<option value="Coustard">Coustard</option>
+					<option value="Sorts Mill Goudy">Sorts Mill Goudy</option>
+					<option value="Quattrocento">Quattrocento</option>
+					<option value="Noticia Text">Noticia Text</option>
+					<option value="PT Serif Caption">PT Serif Caption</option>
+					<option value="Vidaloka">Vidaloka</option>
+					<option value="IM Fell Double Pica">IM Fell Double Pica</option>
+					<option value="IM Fell English SC">IM Fell English SC</option>
+					<option value="Fjord One">Fjord One</option>
+					<option value="Linden Hill">Linden Hill</option>
+					<option value="Copse">Copse</option>
+					<option value="PT Serif">PT Serif</option>
+					<option value="Rokkitt">Rokkitt</option>
+					<option value="IM Fell French Canon">IM Fell French Canon</option>
+					<option value="IM Fell Great Primer SC">IM Fell Great Primer SC</option>
+					<option value="Ovo">Ovo</option>
+					<option value="Old Standard TT">Old Standard TT</option>
+					<option value="Kreon">Kreon</option>
+					<option value="Andada">Andada</option>
+					<option value="Unna">Unna</option>
+					<option value="Merriweather">Merriweather</option>
+					<option value="Alice">Alice</option>
+					<option value="Petrona">Petrona</option>
+					<option value="Adamina">Adamina</option>
+					<option value="Vollkorn">Vollkorn</option>
+					<option value="Bevan">Bevan</option>
+					<option value="Tienne">Tienne</option>
+					<option value="Volkhov">Volkhov</option>
+					<option value="Goudy Bookletter 1911">Goudy Bookletter 1911</option>
+					<option value="Cardo">Cardo</option>
+					<option value="Neuton">Neuton</option>
+					<option value="EB Garamond">EB Garamond</option>
+					<option value="IM Fell DW Pica">IM Fell DW Pica</option>
+					<option value="IM Fell English">IM Fell English</option>
+					<option value="Prociono">Prociono</option>
+					<option value="Arvo">Arvo</option>
+					<option value="Tinos">Tinos</option>
+					<option value="IM Fell Double Pica SC">IM Fell Double Pica SC</option>
+					<option value="Poly">Poly</option>
+					<option value="Josefin Slab">Josefin Slab</option>
+					<option value="Podkova">Podkova</option>
+					<option value="Bree Serif">Bree Serif</option>
+
+				</field>
+
+			
+				<field name="link1" type="radio" default="" label="EH17V23SERIFLINK" description=""></field>
+				<field name="select2" type="radio" default="" label="EH17V23SANSERIF" description="">
+				</field>
+
+				<field name="sanserif1" type="list" default="" label="EH17V23SANSERIF1" description="EH17V23SANSERIF_DESC">
+					
+					<option value="">EH17V23NONE</option>
+					<option value="Asap">Asap</option>
+					<option value="Telex">Telex</option>
+					<option value="Homenaje">Homenaje</option>
+					<option value="Gudea">Gudea</option>
+					<option value="Ruluko">Ruluko</option>
+					<option value="Magra">Magra</option>
+					<option value="Ruda">Ruda</option>
+					<option value="Acme">Acme</option>
+					<option value="Galdeano">Galdeano</option>
+					<option value="Duru Sans">Duru Sans</option>
+					<option value="Asul">Asul</option>
+					<option value="Spinnaker">Spinnaker</option>
+					<option value="Syncopate">Syncopate</option>
+					<option value="Armata">Armata</option>
+					<option value="Play">Play</option>
+					<option value="Electrolize">Electrolize</option>
+					<option value="Nunito">Nunito</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Michroma">Michroma</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Quattrocento Sans">Quattrocento Sans</option>
+					<option value="Tenor Sans">Tenor Sans</option>
+					<option value="Open Sans">Open Sans</option>
+					<option value="Signika">Signika</option>
+					<option value="Terminal Dosis">Terminal Dosis</option>
+					<option value="Droid Sans">Droid Sans</option>
+					<option value="Abel">Abel</option>
+					<option value="Dorsa">Dorsa</option>
+					<option value="PT Sans Narrow">PT Sans Narrow</option>
+					<option value="Candal">Candal</option>
+					<option value="Paytone One">Paytone One</option>
+					<option value="Chivo">Chivo</option>
+					<option value="Cousine">Cousine</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Carme">Carme</option>
+					<option value="Ubuntu Mono">Ubuntu Mono</option>
+					<option value="Andika">Andika</option>
+					<option value="Maven Pro">Maven Pro</option>
+					<option value="Open Sans Condensed">Open Sans Condensed</option>
+					<option value="Lekton">Lekton</option>
+					<option value="Federo">Federo</option>
+					<option value="Istok Web">Istok Web</option>
+					<option value="Amaranth">Amaranth</option>
+					<option value="Basic">Basic</option>
+					<option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+					<option value="Didact Gothic">Didact Gothic</option>
+					<option value="Varela">Varela</option>
+					<option value="Wire One">Wire One</option>
+					<option value="Cuprum">Cuprum</option>
+					<option value="Orbitron">Orbitron</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Signika Negative">Signika Negative</option>
+					<option value="Fresca">Fresca</option>
+					<option value="Puritan">Puritan</option>
+					<option value="Inconsolata">Inconsolata</option>
+					<option value="Aldrich">Aldrich</option>
+					<option value="Allerta">Allerta</option>
+					<option value="Nobile">Nobile</option>
+					<option value="Philosopher">Philosopher</option>
+					<option value="Mako">Mako</option>
+					<option value="Convergence">Convergence</option>
+					<option value="Lato">Lato</option>
+					<option value="Jockey One">Jockey One</option>
+					<option value="Anonymous Pro">Anonymous Pro</option>
+					<option value="Marvel">Marvel</option>
+					<option value="Droid Sans Mono">Droid Sans Mono</option>
+					<option value="PT Sans Caption">PT Sans Caption</option>
+					<option value="Muli">Muli</option>
+					<option value="Inder">Inder</option>
+					<option value="PT Sans">PT Sans</option>
+					<option value="Allerta Stencil">Allerta Stencil</option>
+					<option value="Arimo">Arimo</option>
+					<option value="Snippet">Snippet</option>
+					<option value="News Cycle">News Cycle</option>
+					<option value="Molengo">Molengo</option>
+					<option value="Rosario">Rosario</option>
+					<option value="Voltaire">Voltaire</option>
+					<option value="Hammersmith One">Hammersmith One</option>
+					<option value="Metrophobic">Metrophobic</option>
+					<option value="Cantarell">Cantarell</option>
+					<option value="Josefin Sans">Josefin Sans</option>
+					<option value="Numans">Numans</option>
+					<option value="Francois One">Francois One</option>
+					<option value="Cabin">Cabin</option>
+					<option value="Aclonica">Aclonica</option>
+					<option value="Days One">Days One</option>
+					<option value="Questrial">Questrial</option>
+					<option value="Six Caps">Six Caps</option>
+					<option value="Anton">Anton</option>
+					<option value="Coda Caption">Coda Caption</option>
+					<option value="Actor">Actor</option>
+					<option value="Shanti">Shanti</option>
+					<option value="Cagliostro">Cagliostro</option>
+					<option value="Viga">Viga</option>
+					<option value="Geo">Geo</option>
+					<option value="Rationale">Rationale</option>
+					<option value="Jura">Jura</option>
+					<option value="Varela Round">Varela Round</option>
+					<option value="Antic">Antic</option>
+					<option value="Ubuntu Condensed">Ubuntu Condensed</option>
+					<option value="Marmelad">Marmelad</option>
+					<option value="Cabin Condensed">Cabin Condensed</option>
+				</field>
+				<field name="sanserif2" type="list" default="" label="EH17V23SANSERIF2" description="EH17V23SANSERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Asap">Asap</option>
+					<option value="Telex">Telex</option>
+					<option value="Homenaje">Homenaje</option>
+					<option value="Gudea">Gudea</option>
+					<option value="Ruluko">Ruluko</option>
+					<option value="Magra">Magra</option>
+					<option value="Ruda">Ruda</option>
+					<option value="Acme">Acme</option>
+					<option value="Galdeano">Galdeano</option>
+					<option value="Duru Sans">Duru Sans</option>
+					<option value="Asul">Asul</option>
+					<option value="Spinnaker">Spinnaker</option>
+					<option value="Syncopate">Syncopate</option>
+					<option value="Armata">Armata</option>
+					<option value="Play">Play</option>
+					<option value="Electrolize">Electrolize</option>
+					<option value="Nunito">Nunito</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Michroma">Michroma</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Quattrocento Sans">Quattrocento Sans</option>
+					<option value="Tenor Sans">Tenor Sans</option>
+					<option value="Open Sans">Open Sans</option>
+					<option value="Signika">Signika</option>
+					<option value="Terminal Dosis">Terminal Dosis</option>
+					<option value="Droid Sans">Droid Sans</option>
+					<option value="Abel">Abel</option>
+					<option value="Dorsa">Dorsa</option>
+					<option value="PT Sans Narrow">PT Sans Narrow</option>
+					<option value="Candal">Candal</option>
+					<option value="Paytone One">Paytone One</option>
+					<option value="Chivo">Chivo</option>
+					<option value="Cousine">Cousine</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Carme">Carme</option>
+					<option value="Ubuntu Mono">Ubuntu Mono</option>
+					<option value="Andika">Andika</option>
+					<option value="Maven Pro">Maven Pro</option>
+					<option value="Open Sans Condensed">Open Sans Condensed</option>
+					<option value="Lekton">Lekton</option>
+					<option value="Federo">Federo</option>
+					<option value="Istok Web">Istok Web</option>
+					<option value="Amaranth">Amaranth</option>
+					<option value="Basic">Basic</option>
+					<option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+					<option value="Didact Gothic">Didact Gothic</option>
+					<option value="Varela">Varela</option>
+					<option value="Wire One">Wire One</option>
+					<option value="Cuprum">Cuprum</option>
+					<option value="Orbitron">Orbitron</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Signika Negative">Signika Negative</option>
+					<option value="Fresca">Fresca</option>
+					<option value="Puritan">Puritan</option>
+					<option value="Inconsolata">Inconsolata</option>
+					<option value="Aldrich">Aldrich</option>
+					<option value="Allerta">Allerta</option>
+					<option value="Nobile">Nobile</option>
+					<option value="Philosopher">Philosopher</option>
+					<option value="Mako">Mako</option>
+					<option value="Convergence">Convergence</option>
+					<option value="Lato">Lato</option>
+					<option value="Jockey One">Jockey One</option>
+					<option value="Anonymous Pro">Anonymous Pro</option>
+					<option value="Marvel">Marvel</option>
+					<option value="Droid Sans Mono">Droid Sans Mono</option>
+					<option value="PT Sans Caption">PT Sans Caption</option>
+					<option value="Muli">Muli</option>
+					<option value="Inder">Inder</option>
+					<option value="PT Sans">PT Sans</option>
+					<option value="Allerta Stencil">Allerta Stencil</option>
+					<option value="Arimo">Arimo</option>
+					<option value="Snippet">Snippet</option>
+					<option value="News Cycle">News Cycle</option>
+					<option value="Molengo">Molengo</option>
+					<option value="Rosario">Rosario</option>
+					<option value="Voltaire">Voltaire</option>
+					<option value="Hammersmith One">Hammersmith One</option>
+					<option value="Metrophobic">Metrophobic</option>
+					<option value="Cantarell">Cantarell</option>
+					<option value="Josefin Sans">Josefin Sans</option>
+					<option value="Numans">Numans</option>
+					<option value="Francois One">Francois One</option>
+					<option value="Cabin">Cabin</option>
+					<option value="Aclonica">Aclonica</option>
+					<option value="Days One">Days One</option>
+					<option value="Questrial">Questrial</option>
+					<option value="Six Caps">Six Caps</option>
+					<option value="Anton">Anton</option>
+					<option value="Coda Caption">Coda Caption</option>
+					<option value="Actor">Actor</option>
+					<option value="Shanti">Shanti</option>
+					<option value="Cagliostro">Cagliostro</option>
+					<option value="Viga">Viga</option>
+					<option value="Geo">Geo</option>
+					<option value="Rationale">Rationale</option>
+					<option value="Jura">Jura</option>
+					<option value="Varela Round">Varela Round</option>
+					<option value="Antic">Antic</option>
+					<option value="Ubuntu Condensed">Ubuntu Condensed</option>
+					<option value="Marmelad">Marmelad</option>
+					<option value="Cabin Condensed">Cabin Condensed</option>
+				</field>
+
+
+				<field name="sanserif3" type="list" default="" label="EH17V23SANSERIF3" description="EH17V23SANSERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Asap">Asap</option>
+					<option value="Telex">Telex</option>
+					<option value="Homenaje">Homenaje</option>
+					<option value="Gudea">Gudea</option>
+					<option value="Ruluko">Ruluko</option>
+					<option value="Magra">Magra</option>
+					<option value="Ruda">Ruda</option>
+					<option value="Acme">Acme</option>
+					<option value="Galdeano">Galdeano</option>
+					<option value="Duru Sans">Duru Sans</option>
+					<option value="Asul">Asul</option>
+					<option value="Spinnaker">Spinnaker</option>
+					<option value="Syncopate">Syncopate</option>
+					<option value="Armata">Armata</option>
+					<option value="Play">Play</option>
+					<option value="Electrolize">Electrolize</option>
+					<option value="Nunito">Nunito</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Michroma">Michroma</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Quattrocento Sans">Quattrocento Sans</option>
+					<option value="Tenor Sans">Tenor Sans</option>
+					<option value="Open Sans">Open Sans</option>
+					<option value="Signika">Signika</option>
+					<option value="Terminal Dosis">Terminal Dosis</option>
+					<option value="Droid Sans">Droid Sans</option>
+					<option value="Abel">Abel</option>
+					<option value="Dorsa">Dorsa</option>
+					<option value="PT Sans Narrow">PT Sans Narrow</option>
+					<option value="Candal">Candal</option>
+					<option value="Paytone One">Paytone One</option>
+					<option value="Chivo">Chivo</option>
+					<option value="Cousine">Cousine</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Carme">Carme</option>
+					<option value="Ubuntu Mono">Ubuntu Mono</option>
+					<option value="Andika">Andika</option>
+					<option value="Maven Pro">Maven Pro</option>
+					<option value="Open Sans Condensed">Open Sans Condensed</option>
+					<option value="Lekton">Lekton</option>
+					<option value="Federo">Federo</option>
+					<option value="Istok Web">Istok Web</option>
+					<option value="Amaranth">Amaranth</option>
+					<option value="Basic">Basic</option>
+					<option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+					<option value="Didact Gothic">Didact Gothic</option>
+					<option value="Varela">Varela</option>
+					<option value="Wire One">Wire One</option>
+					<option value="Cuprum">Cuprum</option>
+					<option value="Orbitron">Orbitron</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Signika Negative">Signika Negative</option>
+					<option value="Fresca">Fresca</option>
+					<option value="Puritan">Puritan</option>
+					<option value="Inconsolata">Inconsolata</option>
+					<option value="Aldrich">Aldrich</option>
+					<option value="Allerta">Allerta</option>
+					<option value="Nobile">Nobile</option>
+					<option value="Philosopher">Philosopher</option>
+					<option value="Mako">Mako</option>
+					<option value="Convergence">Convergence</option>
+					<option value="Lato">Lato</option>
+					<option value="Jockey One">Jockey One</option>
+					<option value="Anonymous Pro">Anonymous Pro</option>
+					<option value="Marvel">Marvel</option>
+					<option value="Droid Sans Mono">Droid Sans Mono</option>
+					<option value="PT Sans Caption">PT Sans Caption</option>
+					<option value="Muli">Muli</option>
+					<option value="Inder">Inder</option>
+					<option value="PT Sans">PT Sans</option>
+					<option value="Allerta Stencil">Allerta Stencil</option>
+					<option value="Arimo">Arimo</option>
+					<option value="Snippet">Snippet</option>
+					<option value="News Cycle">News Cycle</option>
+					<option value="Molengo">Molengo</option>
+					<option value="Rosario">Rosario</option>
+					<option value="Voltaire">Voltaire</option>
+					<option value="Hammersmith One">Hammersmith One</option>
+					<option value="Metrophobic">Metrophobic</option>
+					<option value="Cantarell">Cantarell</option>
+					<option value="Josefin Sans">Josefin Sans</option>
+					<option value="Numans">Numans</option>
+					<option value="Francois One">Francois One</option>
+					<option value="Cabin">Cabin</option>
+					<option value="Aclonica">Aclonica</option>
+					<option value="Days One">Days One</option>
+					<option value="Questrial">Questrial</option>
+					<option value="Six Caps">Six Caps</option>
+					<option value="Anton">Anton</option>
+					<option value="Coda Caption">Coda Caption</option>
+					<option value="Actor">Actor</option>
+					<option value="Shanti">Shanti</option>
+					<option value="Cagliostro">Cagliostro</option>
+					<option value="Viga">Viga</option>
+					<option value="Geo">Geo</option>
+					<option value="Rationale">Rationale</option>
+					<option value="Jura">Jura</option>
+					<option value="Varela Round">Varela Round</option>
+					<option value="Antic">Antic</option>
+					<option value="Ubuntu Condensed">Ubuntu Condensed</option>
+					<option value="Marmelad">Marmelad</option>
+					<option value="Cabin Condensed">Cabin Condensed</option>
+				</field>
+
+				<field name="sanserif4" type="list" default="" label="EH17V23SANSERIF3" description="EH17V23SANSERIF_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Asap">Asap</option>
+					<option value="Telex">Telex</option>
+					<option value="Homenaje">Homenaje</option>
+					<option value="Gudea">Gudea</option>
+					<option value="Ruluko">Ruluko</option>
+					<option value="Magra">Magra</option>
+					<option value="Ruda">Ruda</option>
+					<option value="Acme">Acme</option>
+					<option value="Galdeano">Galdeano</option>
+					<option value="Duru Sans">Duru Sans</option>
+					<option value="Asul">Asul</option>
+					<option value="Spinnaker">Spinnaker</option>
+					<option value="Syncopate">Syncopate</option>
+					<option value="Armata">Armata</option>
+					<option value="Play">Play</option>
+					<option value="Electrolize">Electrolize</option>
+					<option value="Nunito">Nunito</option>
+					<option value="Quicksand">Quicksand</option>
+					<option value="Michroma">Michroma</option>
+					<option value="Montserrat">Montserrat</option>
+					<option value="Quattrocento Sans">Quattrocento Sans</option>
+					<option value="Tenor Sans">Tenor Sans</option>
+					<option value="Open Sans">Open Sans</option>
+					<option value="Signika">Signika</option>
+					<option value="Terminal Dosis">Terminal Dosis</option>
+					<option value="Droid Sans">Droid Sans</option>
+					<option value="Abel">Abel</option>
+					<option value="Dorsa">Dorsa</option>
+					<option value="PT Sans Narrow">PT Sans Narrow</option>
+					<option value="Candal">Candal</option>
+					<option value="Paytone One">Paytone One</option>
+					<option value="Chivo">Chivo</option>
+					<option value="Cousine">Cousine</option>
+					<option value="Ubuntu">Ubuntu</option>
+					<option value="Carme">Carme</option>
+					<option value="Ubuntu Mono">Ubuntu Mono</option>
+					<option value="Andika">Andika</option>
+					<option value="Maven Pro">Maven Pro</option>
+					<option value="Open Sans Condensed">Open Sans Condensed</option>
+					<option value="Lekton">Lekton</option>
+					<option value="Federo">Federo</option>
+					<option value="Istok Web">Istok Web</option>
+					<option value="Amaranth">Amaranth</option>
+					<option value="Basic">Basic</option>
+					<option value="Yanone Kaffeesatz">Yanone Kaffeesatz</option>
+					<option value="Didact Gothic">Didact Gothic</option>
+					<option value="Varela">Varela</option>
+					<option value="Wire One">Wire One</option>
+					<option value="Cuprum">Cuprum</option>
+					<option value="Orbitron">Orbitron</option>
+					<option value="Oswald">Oswald</option>
+					<option value="Signika Negative">Signika Negative</option>
+					<option value="Fresca">Fresca</option>
+					<option value="Puritan">Puritan</option>
+					<option value="Inconsolata">Inconsolata</option>
+					<option value="Aldrich">Aldrich</option>
+					<option value="Allerta">Allerta</option>
+					<option value="Nobile">Nobile</option>
+					<option value="Philosopher">Philosopher</option>
+					<option value="Mako">Mako</option>
+					<option value="Convergence">Convergence</option>
+					<option value="Lato">Lato</option>
+					<option value="Jockey One">Jockey One</option>
+					<option value="Anonymous Pro">Anonymous Pro</option>
+					<option value="Marvel">Marvel</option>
+					<option value="Droid Sans Mono">Droid Sans Mono</option>
+					<option value="PT Sans Caption">PT Sans Caption</option>
+					<option value="Muli">Muli</option>
+					<option value="Inder">Inder</option>
+					<option value="PT Sans">PT Sans</option>
+					<option value="Allerta Stencil">Allerta Stencil</option>
+					<option value="Arimo">Arimo</option>
+					<option value="Snippet">Snippet</option>
+					<option value="News Cycle">News Cycle</option>
+					<option value="Molengo">Molengo</option>
+					<option value="Rosario">Rosario</option>
+					<option value="Voltaire">Voltaire</option>
+					<option value="Hammersmith One">Hammersmith One</option>
+					<option value="Metrophobic">Metrophobic</option>
+					<option value="Cantarell">Cantarell</option>
+					<option value="Josefin Sans">Josefin Sans</option>
+					<option value="Numans">Numans</option>
+					<option value="Francois One">Francois One</option>
+					<option value="Cabin">Cabin</option>
+					<option value="Aclonica">Aclonica</option>
+					<option value="Days One">Days One</option>
+					<option value="Questrial">Questrial</option>
+					<option value="Six Caps">Six Caps</option>
+					<option value="Anton">Anton</option>
+					<option value="Coda Caption">Coda Caption</option>
+					<option value="Actor">Actor</option>
+					<option value="Shanti">Shanti</option>
+					<option value="Cagliostro">Cagliostro</option>
+					<option value="Viga">Viga</option>
+					<option value="Geo">Geo</option>
+					<option value="Rationale">Rationale</option>
+					<option value="Jura">Jura</option>
+					<option value="Varela Round">Varela Round</option>
+					<option value="Antic">Antic</option>
+					<option value="Ubuntu Condensed">Ubuntu Condensed</option>
+					<option value="Marmelad">Marmelad</option>
+					<option value="Cabin Condensed">Cabin Condensed</option>
+				</field>
+
+				
+				<field name="link2" type="radio" default="" label="EH17V23SANSERIFLINK" description=""></field>
+				<field name="select3" type="radio" default="" label="EH17V23DISPLAY" description="">
+
+				</field>
+
+				<field name="display1" type="list" default="" label="EH17V23DISPLAY1" description="EH17V23DISPLAY_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Shojumaru">Shojumaru</option>
+					<option value="Diplomata SC">Diplomata SC</option>
+					<option value="Emblema One">Emblema One</option>
+					<option value="Macondo Swash Caps">Macondo Swash Caps</option>
+					<option value="Port Lligat Slab">Port Lligat Slab</option>
+					<option value="Macondo">Macondo</option>
+					<option value="Germania One">Germania One</option>
+					<option value="Sonsie One">Sonsie One</option>
+					<option value="Port Lligat Sans">Port Lligat Sans</option>
+					<option value="Sirin Stencil">Sirin Stencil</option>
+					<option value="Trochut">Trochut</option>
+					<option value="Lemon">Lemon</option>
+					<option value="Quantico">Quantico</option>
+					<option value="Titan One">Titan One</option>
+					<option value="Caesar Dressing">Caesar Dressing</option>
+					<option value="Flamenco">Flamenco</option>
+					<option value="Wellfleet">Wellfleet</option>
+					<option value="Metamorphous">Metamorphous</option>
+					<option value="Fredericka the Great">Fredericka the Great</option>
+					<option value="Passion One">Passion One</option>
+					<option value="Eater">Eater</option>
+					<option value="Trade Winds">Trade Winds</option>
+					<option value="Jim Nightshade">Jim Nightshade</option>
+					<option value="Knewave">Knewave</option>
+					<option value="Flavors">Flavors</option>
+					<option value="Dynalight">Dynalight</option>
+					<option value="Sail">Sail</option>
+					<option value="Arbutus">Arbutus</option>
+					<option value="Fugaz One">Fugaz One</option>
+					<option value="Bubblegum Sans">Bubblegum Sans</option>
+					<option value="Boogaloo">Boogaloo</option>
+					<option value="Creepster">Creepster</option>
+					<option value="Smythe">Smythe</option>
+					<option value="Butcherman">Butcherman</option>
+					<option value="Medula One">Medula One</option>
+					<option value="Playball">Playball</option>
+					<option value="Chelsea Market">Chelsea Market</option>
+					<option value="Overlock">Overlock</option>
+					<option value="Miniver">Miniver</option>
+					<option value="Oldenburg">Oldenburg</option>
+					<option value="Frijole">Frijole</option>
+					<option value="Concert One">Concert One</option>
+					<option value="Uncial Antiqua">Uncial Antiqua</option>
+					<option value="Stint Ultra Condensed">Stint Ultra Condensed</option>
+					<option value="Overlock SC">Overlock SC</option>
+					<option value="Ceviche One">Ceviche One</option>
+					<option value="Sancreek">Sancreek</option>
+					<option value="Corben">Corben</option>
+					<option value="Chango">Chango</option>
+					<option value="Salsa">Salsa</option>
+					<option value="Unlock">Unlock</option>
+					<option value="Contrail One">Contrail One</option>
+					<option value="Alfa Slab One">Alfa Slab One</option>
+					<option value="Raleway">Raleway</option>
+					<option value="Coda">Coda</option>
+					<option value="Sansita One">Sansita One</option>
+					<option value="Megrim">Megrim</option>
+					<option value="Righteous">Righteous</option>
+					<option value="Stardos Stencil">Stardos Stencil</option>
+					<option value="Tulpen One">Tulpen One</option>
+					<option value="Rammetto One">Rammetto One</option>
+					<option value="Monoton">Monoton</option>
+					<option value="Vast Shadow">Vast Shadow</option>
+					<option value="Pompiere">Pompiere</option>
+					<option value="Gravitas One">Gravitas One</option>
+					<option value="Nova Square">Nova Square</option>
+					<option value="Lobster Two">Lobster Two</option>
+					<option value="Geostar Fill">Geostar Fill</option>
+					<option value="Sniglet">Sniglet</option>
+					<option value="Baumans">Baumans</option>
+					<option value="Bigshot One">Bigshot One</option>
+					<option value="Abril Fatface">Abril Fatface</option>
+					<option value="Ruslan Display">Ruslan Display</option>
+					<option value="Smokum">Smokum</option>
+					<option value="Aubrey">Aubrey</option>
+					<option value="Fascinate">Fascinate</option>
+					<option value="Poller One">Poller One</option>
+					<option value="Bowlby One">Bowlby One</option>
+					<option value="Atomic Age">Atomic Age</option>
+					<option value="Nova Mono">Nova Mono</option>
+					<option value="Fontdiner Swanky">Fontdiner Swanky</option>
+					<option value="Nixie One">Nixie One</option>
+					<option value="Monofett">Monofett</option>
+					<option value="Nova Cut">Nova Cut</option>
+					<option value="Sarina">Sarina</option>
+					<option value="Geostar">Geostar</option>
+					<option value="Spirax">Spirax</option>
+					<option value="Asset">Asset</option>
+					<option value="Passero One">Passero One</option>
+					<option value="Nova Script">Nova Script</option>
+					<option value="UnifrakturCook">UnifrakturCook</option>
+					<option value="Slackey">Slackey</option>
+					<option value="Nova Oval">Nova Oval</option>
+					<option value="Nova Flat">Nova Flat</option>
+					<option value="Nosifer">Nosifer</option>
+					<option value="Cherry Cream Soda">Cherry Cream Soda</option>
+					<option value="Yeseva One">Yeseva One</option>
+					<option value="Modern Antiqua">Modern Antiqua</option>
+					<option value="Wallpoet">Wallpoet</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Carter One">Carter One</option>
+					<option value="Astloch">Astloch</option>
+					<option value="Expletus Sans">Expletus Sans</option>
+					<option value="Kelly Slab">Kelly Slab</option>
+					<option value="UnifrakturMaguntia">UnifrakturMaguntia</option>
+					<option value="Nova Slim">Nova Slim</option>
+					<option value="Nova Round">Nova Round</option>
+					<option value="Miltonian Tattoo">Miltonian Tattoo</option>
+					<option value="MedievalSharp">MedievalSharp</option>
+					<option value="Chewy">Chewy</option>
+					<option value="Supermercado One">Supermercado One</option>
+					<option value="Lancelot">Lancelot</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="VT323">VT323</option>
+					<option value="Kranky">Kranky</option>
+					<option value="Mountains of Christmas">Mountains of Christmas</option>
+					<option value="Luckiest Guy">Luckiest Guy</option>
+					<option value="Maiden Orange">Maiden Orange</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Forum">Forum</option>
+					<option value="Cabin Sketch">Cabin Sketch</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Changa One">Changa One</option>
+					<option value="Bangers">Bangers</option>
+					<option value="Crushed">Crushed</option>
+					<option value="Unkempt">Unkempt</option>
+					<option value="Kenia">Kenia</option>
+					<option value="Special Elite">Special Elite</option>
+					<option value="Buda">Buda</option>
+					<option value="Iceland">Iceland</option>
+					<option value="Allan">Allan</option>
+					<option value="Black Ops One">Black Ops One</option>
+					<option value="Irish Grover">Irish Grover</option>
+					<option value="Fascinate Inline">Fascinate Inline</option>
+					<option value="Spicy Rice">Spicy Rice</option>
+					<option value="Ribeye Marrow">Ribeye Marrow</option>
+					<option value="Squada One">Squada One</option>
+					<option value="Goblin One">Goblin One</option>
+					<option value="Piedra">Piedra</option>
+					<option value="Bowlby One SC">Bowlby One SC</option>
+					<option value="Chicle">Chicle</option>
+					<option value="Ribeye">Ribeye</option>
+					<option value="Federant">Federant</option>
+					<option value="Plaster">Plaster</option>
+					<option value="Limelight">Limelight</option>
+					<option value="Original Surfer">Original Surfer</option>
+					<option value="Kaushan Script">Kaushan Script</option>
+					<option value="Lilita One">Lilita One</option>
+					<option value="Ropa Sans">Ropa Sans</option>
+					<option value="Parisienne">Parisienne</option>
+					<option value="Iceberg">Iceberg</option>
+					<option value="Diplomata">Diplomata</option>
+				</field>
+
+				<field name="display2" type="list" default="" label="EH17V23DISPLAY2" description="EH17V23DISPLAY_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Shojumaru">Shojumaru</option>
+					<option value="Diplomata SC">Diplomata SC</option>
+					<option value="Emblema One">Emblema One</option>
+					<option value="Macondo Swash Caps">Macondo Swash Caps</option>
+					<option value="Port Lligat Slab">Port Lligat Slab</option>
+					<option value="Macondo">Macondo</option>
+					<option value="Germania One">Germania One</option>
+					<option value="Sonsie One">Sonsie One</option>
+					<option value="Port Lligat Sans">Port Lligat Sans</option>
+					<option value="Sirin Stencil">Sirin Stencil</option>
+					<option value="Trochut">Trochut</option>
+					<option value="Lemon">Lemon</option>
+					<option value="Quantico">Quantico</option>
+					<option value="Titan One">Titan One</option>
+					<option value="Caesar Dressing">Caesar Dressing</option>
+					<option value="Flamenco">Flamenco</option>
+					<option value="Wellfleet">Wellfleet</option>
+					<option value="Metamorphous">Metamorphous</option>
+					<option value="Fredericka the Great">Fredericka the Great</option>
+					<option value="Passion One">Passion One</option>
+					<option value="Eater">Eater</option>
+					<option value="Trade Winds">Trade Winds</option>
+					<option value="Jim Nightshade">Jim Nightshade</option>
+					<option value="Knewave">Knewave</option>
+					<option value="Flavors">Flavors</option>
+					<option value="Dynalight">Dynalight</option>
+					<option value="Sail">Sail</option>
+					<option value="Arbutus">Arbutus</option>
+					<option value="Fugaz One">Fugaz One</option>
+					<option value="Bubblegum Sans">Bubblegum Sans</option>
+					<option value="Boogaloo">Boogaloo</option>
+					<option value="Creepster">Creepster</option>
+					<option value="Smythe">Smythe</option>
+					<option value="Butcherman">Butcherman</option>
+					<option value="Medula One">Medula One</option>
+					<option value="Playball">Playball</option>
+					<option value="Chelsea Market">Chelsea Market</option>
+					<option value="Overlock">Overlock</option>
+					<option value="Miniver">Miniver</option>
+					<option value="Oldenburg">Oldenburg</option>
+					<option value="Frijole">Frijole</option>
+					<option value="Concert One">Concert One</option>
+					<option value="Uncial Antiqua">Uncial Antiqua</option>
+					<option value="Stint Ultra Condensed">Stint Ultra Condensed</option>
+					<option value="Overlock SC">Overlock SC</option>
+					<option value="Ceviche One">Ceviche One</option>
+					<option value="Sancreek">Sancreek</option>
+					<option value="Corben">Corben</option>
+					<option value="Chango">Chango</option>
+					<option value="Salsa">Salsa</option>
+					<option value="Unlock">Unlock</option>
+					<option value="Contrail One">Contrail One</option>
+					<option value="Alfa Slab One">Alfa Slab One</option>
+					<option value="Raleway">Raleway</option>
+					<option value="Coda">Coda</option>
+					<option value="Sansita One">Sansita One</option>
+					<option value="Megrim">Megrim</option>
+					<option value="Righteous">Righteous</option>
+					<option value="Stardos Stencil">Stardos Stencil</option>
+					<option value="Tulpen One">Tulpen One</option>
+					<option value="Rammetto One">Rammetto One</option>
+					<option value="Monoton">Monoton</option>
+					<option value="Vast Shadow">Vast Shadow</option>
+					<option value="Pompiere">Pompiere</option>
+					<option value="Gravitas One">Gravitas One</option>
+					<option value="Nova Square">Nova Square</option>
+					<option value="Lobster Two">Lobster Two</option>
+					<option value="Geostar Fill">Geostar Fill</option>
+					<option value="Sniglet">Sniglet</option>
+					<option value="Baumans">Baumans</option>
+					<option value="Bigshot One">Bigshot One</option>
+					<option value="Abril Fatface">Abril Fatface</option>
+					<option value="Ruslan Display">Ruslan Display</option>
+					<option value="Smokum">Smokum</option>
+					<option value="Aubrey">Aubrey</option>
+					<option value="Fascinate">Fascinate</option>
+					<option value="Poller One">Poller One</option>
+					<option value="Bowlby One">Bowlby One</option>
+					<option value="Atomic Age">Atomic Age</option>
+					<option value="Nova Mono">Nova Mono</option>
+					<option value="Fontdiner Swanky">Fontdiner Swanky</option>
+					<option value="Nixie One">Nixie One</option>
+					<option value="Monofett">Monofett</option>
+					<option value="Nova Cut">Nova Cut</option>
+					<option value="Sarina">Sarina</option>
+					<option value="Geostar">Geostar</option>
+					<option value="Spirax">Spirax</option>
+					<option value="Asset">Asset</option>
+					<option value="Passero One">Passero One</option>
+					<option value="Nova Script">Nova Script</option>
+					<option value="UnifrakturCook">UnifrakturCook</option>
+					<option value="Slackey">Slackey</option>
+					<option value="Nova Oval">Nova Oval</option>
+					<option value="Nova Flat">Nova Flat</option>
+					<option value="Nosifer">Nosifer</option>
+					<option value="Cherry Cream Soda">Cherry Cream Soda</option>
+					<option value="Yeseva One">Yeseva One</option>
+					<option value="Modern Antiqua">Modern Antiqua</option>
+					<option value="Wallpoet">Wallpoet</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Carter One">Carter One</option>
+					<option value="Astloch">Astloch</option>
+					<option value="Expletus Sans">Expletus Sans</option>
+					<option value="Kelly Slab">Kelly Slab</option>
+					<option value="UnifrakturMaguntia">UnifrakturMaguntia</option>
+					<option value="Nova Slim">Nova Slim</option>
+					<option value="Nova Round">Nova Round</option>
+					<option value="Miltonian Tattoo">Miltonian Tattoo</option>
+					<option value="MedievalSharp">MedievalSharp</option>
+					<option value="Chewy">Chewy</option>
+					<option value="Supermercado One">Supermercado One</option>
+					<option value="Lancelot">Lancelot</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="VT323">VT323</option>
+					<option value="Kranky">Kranky</option>
+					<option value="Mountains of Christmas">Mountains of Christmas</option>
+					<option value="Luckiest Guy">Luckiest Guy</option>
+					<option value="Maiden Orange">Maiden Orange</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Forum">Forum</option>
+					<option value="Cabin Sketch">Cabin Sketch</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Changa One">Changa One</option>
+					<option value="Bangers">Bangers</option>
+					<option value="Crushed">Crushed</option>
+					<option value="Unkempt">Unkempt</option>
+					<option value="Kenia">Kenia</option>
+					<option value="Special Elite">Special Elite</option>
+					<option value="Buda">Buda</option>
+					<option value="Iceland">Iceland</option>
+					<option value="Allan">Allan</option>
+					<option value="Black Ops One">Black Ops One</option>
+					<option value="Irish Grover">Irish Grover</option>
+					<option value="Fascinate Inline">Fascinate Inline</option>
+					<option value="Spicy Rice">Spicy Rice</option>
+					<option value="Ribeye Marrow">Ribeye Marrow</option>
+					<option value="Squada One">Squada One</option>
+					<option value="Goblin One">Goblin One</option>
+					<option value="Piedra">Piedra</option>
+					<option value="Bowlby One SC">Bowlby One SC</option>
+					<option value="Chicle">Chicle</option>
+					<option value="Ribeye">Ribeye</option>
+					<option value="Federant">Federant</option>
+					<option value="Plaster">Plaster</option>
+					<option value="Limelight">Limelight</option>
+					<option value="Original Surfer">Original Surfer</option>
+					<option value="Kaushan Script">Kaushan Script</option>
+					<option value="Lilita One">Lilita One</option>
+					<option value="Ropa Sans">Ropa Sans</option>
+					<option value="Parisienne">Parisienne</option>
+					<option value="Iceberg">Iceberg</option>
+					<option value="Diplomata">Diplomata</option>
+
+				</field>
+
+				<field name="display3" type="list" default="" label="EH17V23DISPLAY3" description="EH17V23DISPLAY_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Shojumaru">Shojumaru</option>
+					<option value="Diplomata SC">Diplomata SC</option>
+					<option value="Emblema One">Emblema One</option>
+					<option value="Macondo Swash Caps">Macondo Swash Caps</option>
+					<option value="Port Lligat Slab">Port Lligat Slab</option>
+					<option value="Macondo">Macondo</option>
+					<option value="Germania One">Germania One</option>
+					<option value="Sonsie One">Sonsie One</option>
+					<option value="Port Lligat Sans">Port Lligat Sans</option>
+					<option value="Sirin Stencil">Sirin Stencil</option>
+					<option value="Trochut">Trochut</option>
+					<option value="Lemon">Lemon</option>
+					<option value="Quantico">Quantico</option>
+					<option value="Titan One">Titan One</option>
+					<option value="Caesar Dressing">Caesar Dressing</option>
+					<option value="Flamenco">Flamenco</option>
+					<option value="Wellfleet">Wellfleet</option>
+					<option value="Metamorphous">Metamorphous</option>
+					<option value="Fredericka the Great">Fredericka the Great</option>
+					<option value="Passion One">Passion One</option>
+					<option value="Eater">Eater</option>
+					<option value="Trade Winds">Trade Winds</option>
+					<option value="Jim Nightshade">Jim Nightshade</option>
+					<option value="Knewave">Knewave</option>
+					<option value="Flavors">Flavors</option>
+					<option value="Dynalight">Dynalight</option>
+					<option value="Sail">Sail</option>
+					<option value="Arbutus">Arbutus</option>
+					<option value="Fugaz One">Fugaz One</option>
+					<option value="Bubblegum Sans">Bubblegum Sans</option>
+					<option value="Boogaloo">Boogaloo</option>
+					<option value="Creepster">Creepster</option>
+					<option value="Smythe">Smythe</option>
+					<option value="Butcherman">Butcherman</option>
+					<option value="Medula One">Medula One</option>
+					<option value="Playball">Playball</option>
+					<option value="Chelsea Market">Chelsea Market</option>
+					<option value="Overlock">Overlock</option>
+					<option value="Miniver">Miniver</option>
+					<option value="Oldenburg">Oldenburg</option>
+					<option value="Frijole">Frijole</option>
+					<option value="Concert One">Concert One</option>
+					<option value="Uncial Antiqua">Uncial Antiqua</option>
+					<option value="Stint Ultra Condensed">Stint Ultra Condensed</option>
+					<option value="Overlock SC">Overlock SC</option>
+					<option value="Ceviche One">Ceviche One</option>
+					<option value="Sancreek">Sancreek</option>
+					<option value="Corben">Corben</option>
+					<option value="Chango">Chango</option>
+					<option value="Salsa">Salsa</option>
+					<option value="Unlock">Unlock</option>
+					<option value="Contrail One">Contrail One</option>
+					<option value="Alfa Slab One">Alfa Slab One</option>
+					<option value="Raleway">Raleway</option>
+					<option value="Coda">Coda</option>
+					<option value="Sansita One">Sansita One</option>
+					<option value="Megrim">Megrim</option>
+					<option value="Righteous">Righteous</option>
+					<option value="Stardos Stencil">Stardos Stencil</option>
+					<option value="Tulpen One">Tulpen One</option>
+					<option value="Rammetto One">Rammetto One</option>
+					<option value="Monoton">Monoton</option>
+					<option value="Vast Shadow">Vast Shadow</option>
+					<option value="Pompiere">Pompiere</option>
+					<option value="Gravitas One">Gravitas One</option>
+					<option value="Nova Square">Nova Square</option>
+					<option value="Lobster Two">Lobster Two</option>
+					<option value="Geostar Fill">Geostar Fill</option>
+					<option value="Sniglet">Sniglet</option>
+					<option value="Baumans">Baumans</option>
+					<option value="Bigshot One">Bigshot One</option>
+					<option value="Abril Fatface">Abril Fatface</option>
+					<option value="Ruslan Display">Ruslan Display</option>
+					<option value="Smokum">Smokum</option>
+					<option value="Aubrey">Aubrey</option>
+					<option value="Fascinate">Fascinate</option>
+					<option value="Poller One">Poller One</option>
+					<option value="Bowlby One">Bowlby One</option>
+					<option value="Atomic Age">Atomic Age</option>
+					<option value="Nova Mono">Nova Mono</option>
+					<option value="Fontdiner Swanky">Fontdiner Swanky</option>
+					<option value="Nixie One">Nixie One</option>
+					<option value="Monofett">Monofett</option>
+					<option value="Nova Cut">Nova Cut</option>
+					<option value="Sarina">Sarina</option>
+					<option value="Geostar">Geostar</option>
+					<option value="Spirax">Spirax</option>
+					<option value="Asset">Asset</option>
+					<option value="Passero One">Passero One</option>
+					<option value="Nova Script">Nova Script</option>
+					<option value="UnifrakturCook">UnifrakturCook</option>
+					<option value="Slackey">Slackey</option>
+					<option value="Nova Oval">Nova Oval</option>
+					<option value="Nova Flat">Nova Flat</option>
+					<option value="Nosifer">Nosifer</option>
+					<option value="Cherry Cream Soda">Cherry Cream Soda</option>
+					<option value="Yeseva One">Yeseva One</option>
+					<option value="Modern Antiqua">Modern Antiqua</option>
+					<option value="Wallpoet">Wallpoet</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Carter One">Carter One</option>
+					<option value="Astloch">Astloch</option>
+					<option value="Expletus Sans">Expletus Sans</option>
+					<option value="Kelly Slab">Kelly Slab</option>
+					<option value="UnifrakturMaguntia">UnifrakturMaguntia</option>
+					<option value="Nova Slim">Nova Slim</option>
+					<option value="Nova Round">Nova Round</option>
+					<option value="Miltonian Tattoo">Miltonian Tattoo</option>
+					<option value="MedievalSharp">MedievalSharp</option>
+					<option value="Chewy">Chewy</option>
+					<option value="Supermercado One">Supermercado One</option>
+					<option value="Lancelot">Lancelot</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="VT323">VT323</option>
+					<option value="Kranky">Kranky</option>
+					<option value="Mountains of Christmas">Mountains of Christmas</option>
+					<option value="Luckiest Guy">Luckiest Guy</option>
+					<option value="Maiden Orange">Maiden Orange</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Forum">Forum</option>
+					<option value="Cabin Sketch">Cabin Sketch</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Changa One">Changa One</option>
+					<option value="Bangers">Bangers</option>
+					<option value="Crushed">Crushed</option>
+					<option value="Unkempt">Unkempt</option>
+					<option value="Kenia">Kenia</option>
+					<option value="Special Elite">Special Elite</option>
+					<option value="Buda">Buda</option>
+					<option value="Iceland">Iceland</option>
+					<option value="Allan">Allan</option>
+					<option value="Black Ops One">Black Ops One</option>
+					<option value="Irish Grover">Irish Grover</option>
+					<option value="Fascinate Inline">Fascinate Inline</option>
+					<option value="Spicy Rice">Spicy Rice</option>
+					<option value="Ribeye Marrow">Ribeye Marrow</option>
+					<option value="Squada One">Squada One</option>
+					<option value="Goblin One">Goblin One</option>
+					<option value="Piedra">Piedra</option>
+					<option value="Bowlby One SC">Bowlby One SC</option>
+					<option value="Chicle">Chicle</option>
+					<option value="Ribeye">Ribeye</option>
+					<option value="Federant">Federant</option>
+					<option value="Plaster">Plaster</option>
+					<option value="Limelight">Limelight</option>
+					<option value="Original Surfer">Original Surfer</option>
+					<option value="Kaushan Script">Kaushan Script</option>
+					<option value="Lilita One">Lilita One</option>
+					<option value="Ropa Sans">Ropa Sans</option>
+					<option value="Parisienne">Parisienne</option>
+					<option value="Iceberg">Iceberg</option>
+					<option value="Diplomata">Diplomata</option>
+
+				</field>
+
+				<field name="display4" type="list" default="" label="EH17V23DISPLAY4" description="EH17V23DISPLAY_DESC">
+					<option value="">EH17V23NONE</option>					
+					<option value="Shojumaru">Shojumaru</option>
+					<option value="Diplomata SC">Diplomata SC</option>
+					<option value="Emblema One">Emblema One</option>
+					<option value="Macondo Swash Caps">Macondo Swash Caps</option>
+					<option value="Port Lligat Slab">Port Lligat Slab</option>
+					<option value="Macondo">Macondo</option>
+					<option value="Germania One">Germania One</option>
+					<option value="Sonsie One">Sonsie One</option>
+					<option value="Port Lligat Sans">Port Lligat Sans</option>
+					<option value="Sirin Stencil">Sirin Stencil</option>
+					<option value="Trochut">Trochut</option>
+					<option value="Lemon">Lemon</option>
+					<option value="Quantico">Quantico</option>
+					<option value="Titan One">Titan One</option>
+					<option value="Caesar Dressing">Caesar Dressing</option>
+					<option value="Flamenco">Flamenco</option>
+					<option value="Wellfleet">Wellfleet</option>
+					<option value="Metamorphous">Metamorphous</option>
+					<option value="Fredericka the Great">Fredericka the Great</option>
+					<option value="Passion One">Passion One</option>
+					<option value="Eater">Eater</option>
+					<option value="Trade Winds">Trade Winds</option>
+					<option value="Jim Nightshade">Jim Nightshade</option>
+					<option value="Knewave">Knewave</option>
+					<option value="Flavors">Flavors</option>
+					<option value="Dynalight">Dynalight</option>
+					<option value="Sail">Sail</option>
+					<option value="Arbutus">Arbutus</option>
+					<option value="Fugaz One">Fugaz One</option>
+					<option value="Bubblegum Sans">Bubblegum Sans</option>
+					<option value="Boogaloo">Boogaloo</option>
+					<option value="Creepster">Creepster</option>
+					<option value="Smythe">Smythe</option>
+					<option value="Butcherman">Butcherman</option>
+					<option value="Medula One">Medula One</option>
+					<option value="Playball">Playball</option>
+					<option value="Chelsea Market">Chelsea Market</option>
+					<option value="Overlock">Overlock</option>
+					<option value="Miniver">Miniver</option>
+					<option value="Oldenburg">Oldenburg</option>
+					<option value="Frijole">Frijole</option>
+					<option value="Concert One">Concert One</option>
+					<option value="Uncial Antiqua">Uncial Antiqua</option>
+					<option value="Stint Ultra Condensed">Stint Ultra Condensed</option>
+					<option value="Overlock SC">Overlock SC</option>
+					<option value="Ceviche One">Ceviche One</option>
+					<option value="Sancreek">Sancreek</option>
+					<option value="Corben">Corben</option>
+					<option value="Chango">Chango</option>
+					<option value="Salsa">Salsa</option>
+					<option value="Unlock">Unlock</option>
+					<option value="Contrail One">Contrail One</option>
+					<option value="Alfa Slab One">Alfa Slab One</option>
+					<option value="Raleway">Raleway</option>
+					<option value="Coda">Coda</option>
+					<option value="Sansita One">Sansita One</option>
+					<option value="Megrim">Megrim</option>
+					<option value="Righteous">Righteous</option>
+					<option value="Stardos Stencil">Stardos Stencil</option>
+					<option value="Tulpen One">Tulpen One</option>
+					<option value="Rammetto One">Rammetto One</option>
+					<option value="Monoton">Monoton</option>
+					<option value="Vast Shadow">Vast Shadow</option>
+					<option value="Pompiere">Pompiere</option>
+					<option value="Gravitas One">Gravitas One</option>
+					<option value="Nova Square">Nova Square</option>
+					<option value="Lobster Two">Lobster Two</option>
+					<option value="Geostar Fill">Geostar Fill</option>
+					<option value="Sniglet">Sniglet</option>
+					<option value="Baumans">Baumans</option>
+					<option value="Bigshot One">Bigshot One</option>
+					<option value="Abril Fatface">Abril Fatface</option>
+					<option value="Ruslan Display">Ruslan Display</option>
+					<option value="Smokum">Smokum</option>
+					<option value="Aubrey">Aubrey</option>
+					<option value="Fascinate">Fascinate</option>
+					<option value="Poller One">Poller One</option>
+					<option value="Bowlby One">Bowlby One</option>
+					<option value="Atomic Age">Atomic Age</option>
+					<option value="Nova Mono">Nova Mono</option>
+					<option value="Fontdiner Swanky">Fontdiner Swanky</option>
+					<option value="Nixie One">Nixie One</option>
+					<option value="Monofett">Monofett</option>
+					<option value="Nova Cut">Nova Cut</option>
+					<option value="Sarina">Sarina</option>
+					<option value="Geostar">Geostar</option>
+					<option value="Spirax">Spirax</option>
+					<option value="Asset">Asset</option>
+					<option value="Passero One">Passero One</option>
+					<option value="Nova Script">Nova Script</option>
+					<option value="UnifrakturCook">UnifrakturCook</option>
+					<option value="Slackey">Slackey</option>
+					<option value="Nova Oval">Nova Oval</option>
+					<option value="Nova Flat">Nova Flat</option>
+					<option value="Nosifer">Nosifer</option>
+					<option value="Cherry Cream Soda">Cherry Cream Soda</option>
+					<option value="Yeseva One">Yeseva One</option>
+					<option value="Modern Antiqua">Modern Antiqua</option>
+					<option value="Wallpoet">Wallpoet</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Carter One">Carter One</option>
+					<option value="Astloch">Astloch</option>
+					<option value="Expletus Sans">Expletus Sans</option>
+					<option value="Kelly Slab">Kelly Slab</option>
+					<option value="UnifrakturMaguntia">UnifrakturMaguntia</option>
+					<option value="Nova Slim">Nova Slim</option>
+					<option value="Nova Round">Nova Round</option>
+					<option value="Miltonian Tattoo">Miltonian Tattoo</option>
+					<option value="MedievalSharp">MedievalSharp</option>
+					<option value="Chewy">Chewy</option>
+					<option value="Supermercado One">Supermercado One</option>
+					<option value="Lancelot">Lancelot</option>
+					<option value="Comfortaa">Comfortaa</option>
+					<option value="VT323">VT323</option>
+					<option value="Kranky">Kranky</option>
+					<option value="Mountains of Christmas">Mountains of Christmas</option>
+					<option value="Luckiest Guy">Luckiest Guy</option>
+					<option value="Maiden Orange">Maiden Orange</option>
+					<option value="Gruppo">Gruppo</option>
+					<option value="Forum">Forum</option>
+					<option value="Cabin Sketch">Cabin Sketch</option>
+					<option value="Lobster">Lobster</option>
+					<option value="Changa One">Changa One</option>
+					<option value="Bangers">Bangers</option>
+					<option value="Crushed">Crushed</option>
+					<option value="Unkempt">Unkempt</option>
+					<option value="Kenia">Kenia</option>
+					<option value="Special Elite">Special Elite</option>
+					<option value="Buda">Buda</option>
+					<option value="Iceland">Iceland</option>
+					<option value="Allan">Allan</option>
+					<option value="Black Ops One">Black Ops One</option>
+					<option value="Irish Grover">Irish Grover</option>
+					<option value="Fascinate Inline">Fascinate Inline</option>
+					<option value="Spicy Rice">Spicy Rice</option>
+					<option value="Ribeye Marrow">Ribeye Marrow</option>
+					<option value="Squada One">Squada One</option>
+					<option value="Goblin One">Goblin One</option>
+					<option value="Piedra">Piedra</option>
+					<option value="Bowlby One SC">Bowlby One SC</option>
+					<option value="Chicle">Chicle</option>
+					<option value="Ribeye">Ribeye</option>
+					<option value="Federant">Federant</option>
+					<option value="Plaster">Plaster</option>
+					<option value="Limelight">Limelight</option>
+					<option value="Original Surfer">Original Surfer</option>
+					<option value="Kaushan Script">Kaushan Script</option>
+					<option value="Lilita One">Lilita One</option>
+					<option value="Ropa Sans">Ropa Sans</option>
+					<option value="Parisienne">Parisienne</option>
+					<option value="Iceberg">Iceberg</option>
+					<option value="Diplomata">Diplomata</option>
+				</field>
+				<field name="link3" type="radio" default="" label="EH17V23DISPLAYLINK" description=""></field>
+
+				<field name="select4" type="radio" default="" label="EH17V23HAND" description=""></field>
+
+				<field name="hand1" type="list" default="" label="EH17V23HAND1" description="EH17V23HAND_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Gloria Hallelujah">Gloria Hallelujah</option>
+					<option value="Delius">Delius</option>
+					<option value="Yellowtail">Yellowtail</option>
+					<option value="Leckerli One">Leckerli One</option>
+					<option value="Nothing You Could Do">Nothing You Could Do</option>
+					<option value="Annie Use Your Telescope">Annie Use Your Telescope</option>
+					<option value="La Belle Aurore">La Belle Aurore</option>
+					<option value="Give You Glory">Give You Glory</option>
+					<option value="Swanky and Moo Moo">Swanky and Moo Moo</option>
+					<option value="Patrick Hand">Patrick Hand</option>
+					<option value="Waiting for the Sunrise">Waiting for the Sunrise</option>
+					<option value="Architects Daughter">Architects Daughter</option>
+					<option value="Shadows Into Light">Shadows Into Light</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Over the Rainbow">Over the Rainbow</option>
+					<option value="Dawning of a New Day">Dawning of a New Day</option>
+					<option value="Zeyada">Zeyada</option>
+					<option value="Sunshiney">Sunshiney</option>
+					<option value="Cedarville Cursive">Cedarville Cursive</option>
+					<option value="Just Another Hand">Just Another Hand</option>
+					<option value="Dancing Script">Dancing Script</option>
+					<option value="Meddon">Meddon</option>
+					<option value="Indie Flower">Indie Flower</option>
+					<option value="Coming Soon">Coming Soon</option>
+					<option value="Walter Turncoat">Walter Turncoat</option>
+					<option value="Homemade Apple">Homemade Apple</option>
+					<option value="Rock Salt">Rock Salt</option>
+					<option value="Crafty Girls">Crafty Girls</option>
+					<option value="The Girl Next Door">The Girl Next Door</option>
+					<option value="Covered By Your Grace">Covered By Your Grace</option>
+					<option value="Damion">Damion</option>
+					<option value="Pacifico">Pacifico</option>
+					<option value="Vibur">Vibur</option>
+					<option value="Calligraffitt">Calligraffitt</option>
+					<option value="Neucha">Neucha</option>
+					<option value="Reenie Beanie">Reenie Beanie</option>
+					<option value="Loved by the King">Loved by the King</option>
+					<option value="Schoolbell">Schoolbell</option>
+					<option value="Kristi">Kristi</option>
+					<option value="Sue Ellen Francisco">Sue Ellen Francisco</option>
+					<option value="Just Me Again Down Here">Just Me Again Down Here</option>
+					<option value="Redressed">Redressed</option>
+
+			</field>
+
+			<field name="hand2" type="list" default="" label="EH17V23HAND2" description="EH17V23HAND_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Gloria Hallelujah">Gloria Hallelujah</option>
+					<option value="Delius">Delius</option>
+					<option value="Yellowtail">Yellowtail</option>
+					<option value="Leckerli One">Leckerli One</option>
+					<option value="Nothing You Could Do">Nothing You Could Do</option>
+					<option value="Annie Use Your Telescope">Annie Use Your Telescope</option>
+					<option value="La Belle Aurore">La Belle Aurore</option>
+					<option value="Give You Glory">Give You Glory</option>
+					<option value="Swanky and Moo Moo">Swanky and Moo Moo</option>
+					<option value="Patrick Hand">Patrick Hand</option>
+					<option value="Waiting for the Sunrise">Waiting for the Sunrise</option>
+					<option value="Architects Daughter">Architects Daughter</option>
+					<option value="Shadows Into Light">Shadows Into Light</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Over the Rainbow">Over the Rainbow</option>
+					<option value="Dawning of a New Day">Dawning of a New Day</option>
+					<option value="Zeyada">Zeyada</option>
+					<option value="Sunshiney">Sunshiney</option>
+					<option value="Cedarville Cursive">Cedarville Cursive</option>
+					<option value="Just Another Hand">Just Another Hand</option>
+					<option value="Dancing Script">Dancing Script</option>
+					<option value="Meddon">Meddon</option>
+					<option value="Indie Flower">Indie Flower</option>
+					<option value="Coming Soon">Coming Soon</option>
+					<option value="Walter Turncoat">Walter Turncoat</option>
+					<option value="Homemade Apple">Homemade Apple</option>
+					<option value="Rock Salt">Rock Salt</option>
+					<option value="Crafty Girls">Crafty Girls</option>
+					<option value="The Girl Next Door">The Girl Next Door</option>
+					<option value="Covered By Your Grace">Covered By Your Grace</option>
+					<option value="Damion">Damion</option>
+					<option value="Pacifico">Pacifico</option>
+					<option value="Vibur">Vibur</option>
+					<option value="Calligraffitt">Calligraffitt</option>
+					<option value="Neucha">Neucha</option>
+					<option value="Reenie Beanie">Reenie Beanie</option>
+					<option value="Loved by the King">Loved by the King</option>
+					<option value="Schoolbell">Schoolbell</option>
+					<option value="Kristi">Kristi</option>
+					<option value="Sue Ellen Francisco">Sue Ellen Francisco</option>
+					<option value="Just Me Again Down Here">Just Me Again Down Here</option>
+					<option value="Redressed">Redressed</option>
+
+			</field>
+
+			<field name="hand3" type="list" default="" label="EH17V23HAND3" description="EH17V23HAND_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Gloria Hallelujah">Gloria Hallelujah</option>
+					<option value="Delius">Delius</option>
+					<option value="Yellowtail">Yellowtail</option>
+					<option value="Leckerli One">Leckerli One</option>
+					<option value="Nothing You Could Do">Nothing You Could Do</option>
+					<option value="Annie Use Your Telescope">Annie Use Your Telescope</option>
+					<option value="La Belle Aurore">La Belle Aurore</option>
+					<option value="Give You Glory">Give You Glory</option>
+					<option value="Swanky and Moo Moo">Swanky and Moo Moo</option>
+					<option value="Patrick Hand">Patrick Hand</option>
+					<option value="Waiting for the Sunrise">Waiting for the Sunrise</option>
+					<option value="Architects Daughter">Architects Daughter</option>
+					<option value="Shadows Into Light">Shadows Into Light</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Over the Rainbow">Over the Rainbow</option>
+					<option value="Dawning of a New Day">Dawning of a New Day</option>
+					<option value="Zeyada">Zeyada</option>
+					<option value="Sunshiney">Sunshiney</option>
+					<option value="Cedarville Cursive">Cedarville Cursive</option>
+					<option value="Just Another Hand">Just Another Hand</option>
+					<option value="Dancing Script">Dancing Script</option>
+					<option value="Meddon">Meddon</option>
+					<option value="Indie Flower">Indie Flower</option>
+					<option value="Coming Soon">Coming Soon</option>
+					<option value="Walter Turncoat">Walter Turncoat</option>
+					<option value="Homemade Apple">Homemade Apple</option>
+					<option value="Rock Salt">Rock Salt</option>
+					<option value="Crafty Girls">Crafty Girls</option>
+					<option value="The Girl Next Door">The Girl Next Door</option>
+					<option value="Covered By Your Grace">Covered By Your Grace</option>
+					<option value="Damion">Damion</option>
+					<option value="Pacifico">Pacifico</option>
+					<option value="Vibur">Vibur</option>
+					<option value="Calligraffitt">Calligraffitt</option>
+					<option value="Neucha">Neucha</option>
+					<option value="Reenie Beanie">Reenie Beanie</option>
+					<option value="Loved by the King">Loved by the King</option>
+					<option value="Schoolbell">Schoolbell</option>
+					<option value="Kristi">Kristi</option>
+					<option value="Sue Ellen Francisco">Sue Ellen Francisco</option>
+					<option value="Just Me Again Down Here">Just Me Again Down Here</option>
+					<option value="Redressed">Redressed</option>
+
+			</field>
+
+			<field name="hand4" type="list" default="" label="EH17V23HAND4" description="EH17V23HAND_DESC">
+					<option value="">EH17V23NONE</option>
+					<option value="Gloria Hallelujah">Gloria Hallelujah</option>
+					<option value="Delius">Delius</option>
+					<option value="Yellowtail">Yellowtail</option>
+					<option value="Leckerli One">Leckerli One</option>
+					<option value="Nothing You Could Do">Nothing You Could Do</option>
+					<option value="Annie Use Your Telescope">Annie Use Your Telescope</option>
+					<option value="La Belle Aurore">La Belle Aurore</option>
+					<option value="Give You Glory">Give You Glory</option>
+					<option value="Swanky and Moo Moo">Swanky and Moo Moo</option>
+					<option value="Patrick Hand">Patrick Hand</option>
+					<option value="Waiting for the Sunrise">Waiting for the Sunrise</option>
+					<option value="Architects Daughter">Architects Daughter</option>
+					<option value="Shadows Into Light">Shadows Into Light</option>
+					<option value="Love Ya Like A Sister">Love Ya Like A Sister</option>
+					<option value="Over the Rainbow">Over the Rainbow</option>
+					<option value="Dawning of a New Day">Dawning of a New Day</option>
+					<option value="Zeyada">Zeyada</option>
+					<option value="Sunshiney">Sunshiney</option>
+					<option value="Cedarville Cursive">Cedarville Cursive</option>
+					<option value="Just Another Hand">Just Another Hand</option>
+					<option value="Dancing Script">Dancing Script</option>
+					<option value="Meddon">Meddon</option>
+					<option value="Indie Flower">Indie Flower</option>
+					<option value="Coming Soon">Coming Soon</option>
+					<option value="Walter Turncoat">Walter Turncoat</option>
+					<option value="Homemade Apple">Homemade Apple</option>
+					<option value="Rock Salt">Rock Salt</option>
+					<option value="Crafty Girls">Crafty Girls</option>
+					<option value="The Girl Next Door">The Girl Next Door</option>
+					<option value="Covered By Your Grace">Covered By Your Grace</option>
+					<option value="Damion">Damion</option>
+					<option value="Pacifico">Pacifico</option>
+					<option value="Vibur">Vibur</option>
+					<option value="Calligraffitt">Calligraffitt</option>
+					<option value="Neucha">Neucha</option>
+					<option value="Reenie Beanie">Reenie Beanie</option>
+					<option value="Loved by the King">Loved by the King</option>
+					<option value="Schoolbell">Schoolbell</option>
+					<option value="Kristi">Kristi</option>
+					<option value="Sue Ellen Francisco">Sue Ellen Francisco</option>
+					<option value="Just Me Again Down Here">Just Me Again Down Here</option>
+					<option value="Redressed">Redressed</option>
+
+			</field>
+			<field name="link4" type="radio" default="" label="EH17V23HANDLINK" description=""></field>
+
+			<field name="customfont" type="textarea" cols="40" rows="8" default="" label="EH17V23CUSTOM" description="EH17V23CUSTOM_DESC">
+
+			</field>
+
+
+
+			</fieldset>
+
+			<fieldset name="OTHER">
+
+				<field name="swfobject" type="radio" default="1" label="EH17V23SWF" description="EH17V23SWF_DESC">
+
+						<option value="1">EH17V23NO</option>
+						<option value="2">EH17V23YES</option>
+
+				</field>
+
+				<field name="caption" type="radio" default="1" label="EH17V23SWITCH2" description="EH17V23SWITCH_DESC">
+
+						<option value="1">EH17V23NO</option>
+						<option value="2">EH17V23YES</option>
+
+				</field>
+
+
+
+
+				<field name="ehemulate" type="radio" default="2" label="EH17V23IE7" description="EH17V23IE7_DESC">
+
+						<option value="2">EH17V23NO</option>
+						<option value="1">EH17V23YES</option>
+
+
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
+

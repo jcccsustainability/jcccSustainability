@@ -4,21 +4,21 @@ class JConfig {
 	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Sustainability jccc test ';
+	public $sitename = 'Jccc Testing Site';
 	public $editor = 'tinymce';
 	public $captcha = '0';
 	public $list_limit = '20';
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysql';
+	public $dbtype = 'mysqli';
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
 	public $db = 'joomla';
 	public $dbprefix = 'joom1_';
 	public $live_site = '';
-	public $secret = '8Z4tIeymDbiTezAV';
+	public $secret = 'qdDuf2QXI7PEjPHD';
 	public $gzip = '0';
 	public $error_reporting = 'default';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&amp;keyref=Help{major}{minor}:{keyref}';
@@ -30,8 +30,8 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
 	public $mailer = 'mail';
-	public $mailfrom = 'ww2airforce@gmail.com';
-	public $fromname = 'Sustainability jccc test ';
+	public $mailfrom = 'mikedavidread@gmail.com';
+	public $fromname = 'Jccc Testing Site';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = 'E:\\wamp\\www\\joomla/logs';
-	public $tmp_path = 'E:\\wamp\\www\\joomla/tmp';
+	public $log_path = 'E:\\wamp\\www\\site/logs';
+	public $tmp_path = 'E:\\wamp\\www\\site/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }

@@ -18,7 +18,11 @@
  
  //add menu button to use in small and/or tiny screen
  document.addEvent ('domready', function () {
-	if ($('ja-megamenu')) {
+	 makeMenu();
+ });
+function makeMenu(){
+	
+if ($('ja-megamenu')) {
 		var menubutton = new Element ('div', {id:'ja-menu-button', html: 'Menu'}).inject ($('ja-megamenu'), 'before');
 		var ul0 = $('ja-megamenu').getElement ('ul.level0');
 		if (!ul0) return;
@@ -42,11 +46,15 @@
 			//add event for link in menu item. the event action only when menubutton is not hide (eg: wide screen)
 			if (!li.getElement('a')) return;
 			li.getElement('a').addEvent ('click', function () {
+				
 				if (menubutton.getStyle ('z-index') >= 3) {
 					//check z-index of this li item: 4 - goto the link
 					if (menubutton.getStyle ('z-index') == 4) {
 						location.href = this.href;
-						return;
+						
+						document.getElementById('ja-mainnav').removeClass ('rjd-active');
+						
+						//return;
 					}
 					//check if has submenu - leave menu process - jump to link
 					if (!li.getElement ('.childcontent')) return true;
@@ -64,5 +72,4 @@
 			});
 		});
 	}
- });
- 
+}
