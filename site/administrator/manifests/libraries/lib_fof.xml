@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="2.5" method="upgrade">
+    <name>lib_fof</name>
+	<libraryname>fof</libraryname>
+	<description>Framework-on-Framework (FOF) – A rapid component development framework extension for Joomla!</description>
+	<creationDate>2012-12-24</creationDate>
+	<author>Nicholas K. Dionysopoulos / AkeebaBackup.com</author>
+	<authorEmail>nicholas@akeebabackup.com</authorEmail>
+	<authorUrl>https://www.akeebabackup.com</authorUrl>
+	<copyright>(C)2011-2013 Nicholas K. Dionysopoulos</copyright>
+	<license>GNU GPLv3 or later</license>
+	<version>1.3.1</version>
+	<packager>AkeebaBackup.com</packager>
+	<packagerurl>https://www.AkeebaBackup.com</packagerurl>
+	<scriptfile>script.fof.php</scriptfile>
+	<files folder="fof">
+		<folder>encrypt</folder>
+
+		<file>LICENSE.txt</file>
+		<file>version.txt</file>
+		<file>index.html</file>
+		<file>controller.php</file>
+		<file>dispatcher.php</file>
+		<file>include.php</file>
+		<file>inflector.php</file>
+		<file>input.php</file>
+		<file>model.php</file>
+		<file>query.abstract.php</file>
+		<file>query.element.php</file>
+		<file>query.mysql.php</file>
+		<file>query.mysqli.php</file>
+		<file>query.sqlazure.php</file>
+		<file>query.sqlsrv.php</file>
+		<file>render.abstract.php</file>
+		<file>render.joomla.php</file>
+		<file>render.joomla3.php</file>
+		<file>render.strapper.php</file>
+		<file>string.utils.php</file>
+		<file>table.php</file>
+		<file>template.utils.php</file>
+		<file>toolbar.php</file>
+		<file>view.csv.php</file>
+		<file>view.html.php</file>
+		<file>view.json.php</file>
+		<file>view.php</file>
+	</files>
+</extension>
