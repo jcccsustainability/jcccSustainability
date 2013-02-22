@@ -39,13 +39,9 @@ Chart.prototype.draw = function(){
 
 
 
-//runs after site has fully loaded (sort of like main... but you can have functions inside)
-//use $( "#divid") to edit the div with jQuery
-jQuery(document).ready(function($) {
+
 google.load("visualization", "1", {packages:["corechart",'table']});
 
-});
-//end of jquery
 
 
 //checks if div exists

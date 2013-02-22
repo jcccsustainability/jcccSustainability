@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:10858:"          1361500828<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php die("Access Denied"); ?>#x#s:10940:"          1361504729<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
 
@@ -36,21 +36,21 @@ var isRTL = false;
   <script src="/site/media/system/js/core.js" type="text/javascript"></script>
   <script src="/site/media/system/js/mootools-more.js" type="text/javascript"></script>
   <script src="/site/media/system/js/caption.js" type="text/javascript"></script>
-  <script src="/site/../capstoneFiles/js/colorMap.js" type="text/javascript"></script>
-  <script src="/site/../capstoneFiles/js/homePageCharts.js" type="text/javascript"></script>
-  <script src="/site/../capstoneFiles/js/testCode.js" type="text/javascript"></script>
   <script src="/site/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
   <script src="/site/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
   <script src="/site/templates/ja_elastica/js/jquery/jquery-1.6.4.min.js" type="text/javascript"></script>
   <script src="/site/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
   <script src="/site/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="/site/templates/ja_elastica/../../../capstoneFiles/js/colorMap.js" type="text/javascript"></script>
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <script src="/site/templates/ja_elastica/../../../capstoneFiles/js/Charts.js" type="text/javascript"></script>
+  <script src="/site/templates/ja_elastica/../../../capstoneFiles/js/homePageCharts.js" type="text/javascript"></script>
   <script src="/site/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
   <script type="text/javascript">
 window.addEvent('load', function() {
 				new JCaption('img.caption');
 			});jQuery.noConflict();
   </script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
 <!--[if ie]><link href="/site/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
 <!--[if ie 7]><link href="/site/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
