@@ -26,7 +26,8 @@ function Chart( div){
 	//holds chart options
 	this.options;
 		
-	//stores the new chart to charts array 
+	//stores the new chart to charts array if div exists
+	if(isDiv(div)) 
 	charts.push(this);
 }
 //Chart Method (draws the chart)
@@ -51,14 +52,14 @@ function isDiv(c){
 	//checks if its a chart object and if javascript cant find the id
 	//this is for something like isDiv('chart_ID');
 	if(charts.indexOf( c ) == -1 && document.getElementById(c) == null )
-	{
+	{ dbg("div with  id = \""+c.div+"\"  not found");
 		return false;
 	}
 		
 	//if it is a hart and the div_id is not found it will send a debug and delete
 	else if(charts.indexOf( c ) >= 0 && document.getElementById(c.div) === null)
 		{   //send debug
-			console.debug("Chart with div".c.div." not found, Deleted");
+			dbg("Chart with <div id = \""+c.div+"\" > not found, Chart Deleted");
 			//delets c from charts array
 			charts.splice(charts.indexOf( c ),1);
 			return false;

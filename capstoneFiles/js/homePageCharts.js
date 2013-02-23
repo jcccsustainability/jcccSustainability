@@ -21,13 +21,6 @@ function drawChart1(c) {
 	//		(!never set width to anything other than '100%' in these options they will mess with the mobile viewing)
 	// chart holds the data for the google chart
 	
-		//check if div id exists (you can pass a dive such as 'div_id' or the chart)
-		//if it doesnt exist all the charts on the site might not show up!
-		//and worse we will be running un needed queries and the future
-		//this will also delete the chart if no div exists
-		//!always check for div !
-		if(!isDiv(c))
-			return;
 		
 		//load Data from google dataTable
 		c.data = google.visualization.arrayToDataTable([
@@ -56,8 +49,7 @@ function drawChart1(c) {
 
 //draws a test SQL to PHP that returns JASON object
 function drawChart2(c) {
-	if(!isDiv(c))
-			return;
+
 	//set a mySql query
 	 var q = "SELECT TABLE_NAME, AVG_ROW_LENGTH  FROM TABLES "+
      " where AVG_ROW_LENGTH > 0  ORDER BY AVG_ROW_LENGTH DESC 	LIMIT 0, 20";
@@ -91,8 +83,7 @@ function drawChart2(c) {
 
 
 function drawTable(c) {
-	if(!isDiv(c))
-			return;
+
 			
 	  c.data = google.visualization.arrayToDataTable([
 		['Name', 'Height', 'Smokes'],
