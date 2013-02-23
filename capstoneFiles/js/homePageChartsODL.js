@@ -60,30 +60,26 @@ function drawChart1(c) {
 function drawChart2(c) {
 	if(!isDiv(c))
 			return;
-	//set a mySql qery
-	 var q = "SELECT TABLE_NAME, AVG_ROW_LENGTH  FROM TABLES "+
-     " where AVG_ROW_LENGTH > 0  ORDER BY AVG_ROW_LENGTH DESC 	LIMIT 0, 20";
-    //set the database
-     var db = "information_schema";
-     //dbug link...
-     console.debug('http://localhost/capstoneFiles/php/getData.php?q='+encodeURIComponent(q)+'&dbs='+encodeURIComponent(db));
- 	//get google chart data from JSON from php
-      var jsonData = $.ajax({
-          url: "../capstoneFiles/php/getData.php?q="+encodeURIComponent(q)+"&dbs="+encodeURIComponent(db),
-          dataType:"json",
-          async: false
-          }).responseText;
-          
-      // Create our data table out of JSON data loaded from
-      c.data = new google.visualization.DataTable(jsonData);
-      //set some options (charts need a height)
-	  c.options = { 'title':'Testing SQL to google chart',
-	  			height:'250'
-                     };
-      // create and draw pie chart
-      c.chart = new google.visualization.PieChart(document.getElementById(c.div));
-      c.draw();
-    
+	
+	  c.data = google.visualization.arrayToDataTable([
+		['Month',   'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda'],
+		['2004/05',    165,      938,         522,             998,           450],
+		['2005/06',    135,      1120,        599,             1268,          288],
+		['2006/07',    157,      1167,        587,             807,           397],
+		['2007/08',    139,      1110,        615,             968,           215],
+		['2008/09',    136,      691,         629,             1026,          366]
+	  ]);
+	
+		c.options =  {
+				title : 'Monthly Coffee Production by Country',
+				isStacked: true,
+				height: 400,
+				vAxis: {title: "Cups"},
+				hAxis: {title: "Month"}
+			 };
+	  // Create and draw the visualization.
+	  c.chart = new google.visualization.AreaChart(document.getElementById(c.div));
+	  c.draw();
 	
 }
 

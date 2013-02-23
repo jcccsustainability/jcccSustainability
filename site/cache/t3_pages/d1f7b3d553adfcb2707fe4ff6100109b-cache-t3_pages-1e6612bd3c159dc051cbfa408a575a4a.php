@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#s:11230:"          1361588933<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php die("Access Denied"); ?>#x#s:11254:"          1361595624<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
 
@@ -137,7 +137,7 @@ window.addEvent('load', function() {
 			<h1>Pick a Building</h1>
 <img id="grayImage" onload="drawImage()" src='../capstoneFiles/images/MAP.png'/>
 <div id="mapDiv"></div>
-<noscript><strong>JavaScript is currently disabled.</strong>Please enable it for a better experience of <a href="http://2glux.com/projects/jumi">Jumi</a>.</noscript>			</div>
+<div id="mapSize"></div><noscript><strong>JavaScript is currently disabled.</strong>Please enable it for a better experience of <a href="http://2glux.com/projects/jumi">Jumi</a>.</noscript>			</div>
 		</div>
     </div>
 		<div class="ja-moduletable ja-masonry moduletable grid-double" id="Mod89">
