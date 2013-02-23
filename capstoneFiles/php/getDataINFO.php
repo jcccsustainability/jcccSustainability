@@ -1,13 +1,13 @@
 <?php 
 //Michael Read
-//mySql to json for google chart's datatable
-// https://developers.google.com/chart/interactive/docs/php_example
+//just prints the column names and the data types of each column in a simple html table
 
 
 //connect to database
 $username = "root" ;
 $password = '';
 $db;
+
 //sets data base for veriable by url peramiters
 if (!empty($_GET['dbs']))
 $dbName = $_GET['dbs'] ;
@@ -27,6 +27,7 @@ try {
 catch (PDOException $e) {
      echo 'ERROR: ' . $e->getMessage();
 }
+
 //set some atturabutes
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //run query
@@ -36,6 +37,7 @@ $query->execute();
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
 ////End of db connect////////////////////////////////////////////////////
 
+//sql data types to google data types
 $sqlTypes = array (
 "VAR_STRING" => "string",
 "LONGLONG" => "number",
@@ -44,7 +46,7 @@ $sqlTypes = array (
 
 //get number of cols retuned
 $colCount = $query->columnCount();
-
+//set up a html table for easy reading
 echo "number cols retruned: ".$colCount;
 echo "<table border='1'>";
 echo "<tr>";
@@ -55,10 +57,9 @@ echo "</tr>";
 //add each col to $table['cols']
 for($i = 0; $i < $colCount; $i++){
 	
-	//holds all the meta data as an array
-	//$met  = $query->getColumnMeta($i);
+	//holds all the meta data of a single col as an array
 		$met = $query->getColumnMeta($i);
-		
+		//html row added with name and sql type and google type (if they mach else it will print !not set!)
 		echo "<tr>";
 		echo '<td>'.$met["name"]."</td>";
 		echo '<td>'.$met["native_type"]."</td>";
@@ -68,11 +69,8 @@ for($i = 0; $i < $colCount; $i++){
 			echo '<td>!NOT SET!</td>';
 	
 		echo "</tr>";
-		
-	
-	//add the dataTable's column name and datatype
-	//$table['cols'][] = array('label' => $table_fields["name"], 'type' => $sqlTypes[$table_fields["native_type"]]);
-}
+		}
+//close the html talbe
 echo "</table >";
 
 ?>

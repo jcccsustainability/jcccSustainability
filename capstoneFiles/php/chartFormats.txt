@@ -1,9 +1,12 @@
-PieChart: 			string, nummber
-ScatterChart:		number, number
-Gauge:				string, number
-ComboChart:			date, number...
-LineChart:			date, number...
-BarChart:			date, number...
-ColumnChart:		date, number...
-CandlestickChart:	string, number...
-		
+Here are the formats that you should run 
+when useing a slect statemnet
++------------------------------------+
+|        PieChart | string, nummber  |
+|    ScatterChart | number, number   |
+|           Gauge | string, number   |
+|      ComboChart | date, number...  |
+|       LineChart | date, number...  |
+|		 BarChart | date, number...  |
+| 	  ColumnChart | date, number...  |
+|CandlestickChart | string, number...|
++------------------------------------+		

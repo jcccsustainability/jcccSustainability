@@ -1,6 +1,8 @@
+//load google chart packages
+google.load("visualization", "1", {packages:["corechart",'table']});
 
+//simeple debug sort hand function with toggle
 var debug = true;
-
 function dbg(e){
 	if (debug)
 	console.debug(e);
@@ -40,22 +42,24 @@ Chart.prototype.draw = function(){
 
 
 
-google.load("visualization", "1", {packages:["corechart",'table']});
+
 
 
 
 //checks if div exists
 function isDiv(c){
-	
+	//checks if its a chart object and if javascript cant find the id
+	//this is for something like isDiv('chart_ID');
 	if(charts.indexOf( c ) == -1 && document.getElementById(c) == null )
 	{
-	
 		return false;
 	}
 		
-	//is a chart and not a div
+	//if it is a hart and the div_id is not found it will send a debug and delete
 	else if(charts.indexOf( c ) >= 0 && document.getElementById(c.div) === null)
-		{   //delets from array
+		{   //send debug
+			console.debug("Chart with div".c.div." not found, Deleted");
+			//delets c from charts array
 			charts.splice(charts.indexOf( c ),1);
 			return false;
 		}
@@ -67,14 +71,12 @@ function isDiv(c){
 
 //when window is ever resized this will be called
 window.onresize = function(event) {
-	//resized campus map
+	//checks is campus map is showing and resizes it
 	if(document.getElementById('map') !== null)
-	document.getElementById('map').style.width = document.getElementById('mapSize').offsetWidth + "px";
-	//resize the charts
-	
+		document.getElementById('map').style.width = document.getElementById('mapSize').offsetWidth + "px";
+	//resize each chart in charts array
 	for (var i = 0; i < charts.length; i++){
-    	charts[i].draw();
-		
+    	charts[i].draw();	
 	}
 	
 };

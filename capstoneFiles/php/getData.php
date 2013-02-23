@@ -7,19 +7,23 @@
 //connect to database
 $username = "root" ;
 $password = '';
+//db used in try needs to be global
 $db;
-//sets data base for veriable by url peramiters
+
+//gets data base name from veriable by url peramiters
 if (!empty($_GET['dbs']))
 $dbName = $_GET['dbs'] ;
-else//for testing
+else//if no pramiter it will pick a test one 
 $dbName = "information_schema";
 
+//gets query sting from veriable by url peramiters
 if (!empty($_GET['q']))
 //holds a query
 $queryStr = $_GET['q'];
-else
+else//if no pramiter it will pick a test one 
 $queryStr = "SELECT TABLE_NAME, AVG_ROW_LENGTH  FROM TABLES where AVG_ROW_LENGTH > 0 LIMIT 0 , 5";
-//echo $queryStr;
+
+
 //try to connect to database/////////////////////////////////////////////////////////////
 try {
 	$db = new PDO('mysql:host=localhost;dbname='.$dbName , $username, $password);
@@ -37,7 +41,7 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 ////End of db connect////////////////////////////////////////////////////
 
 
-//converts mySql datat yples to google chart data types 
+//converts mySql data types to google chart data types 
 //$sqlTypes["VAR_STRING"]; will return "string"
 $sqlTypes = array (
 "VAR_STRING" => "string",
@@ -52,30 +56,34 @@ $colCount = $query->columnCount();
 
 //make google chart dataTable
 $table = array();
-//add the datTabe array of cols
+
+//add array of cols to the data table
 $table['cols'] = array();
 
-//add each col to $table['cols']
+//add each col to the data table as $table['cols']
 for($i = 0; $i < $colCount; $i++){
-	//holds all the meta data as an array
+	//get and hold all the meta data for this col as an array
 	$table_fields  = $query->getColumnMeta($i);
-	//add the dataTable's column name and datatype
-	$table['cols'][] = array('label' => $table_fields["name"], 'type' => $sqlTypes[$table_fields["native_type"]]);
+	
+	//add the google's dataTable label name and data type
+	$table['cols'][] = array('label' => $table_fields["name"], 
+		                      'type' => $sqlTypes[$table_fields["native_type"]]);
+	//go to next column						  
 }
 
-//make dataTable rows
+//make google's dataTable rows
 $table['rows'] = array();
 
 //add each row to the datatable
 foreach ($results as $row) {
-//creat a array to hold each cell in the row
+//creat a array to hold each cell in a single row
   	$cells = array();  
 	//get each cell by row(foreach above) and column (foreach below)
 	foreach($table['cols'] as $col)
 	{
 		//get the col's type so the cell can be cassed for google charts 
 		switch($col["type"]){
-			//if its a number cast to a double
+			//if its a number cast to a double to be on the safe side
 			case "number":
 				 $cells[] = array('v' => (double)$row[$col["label"]]);
 				break;
@@ -83,28 +91,33 @@ foreach ($results as $row) {
 			case "string":
 				$cells[] = array('v' => $row[$col["label"]]);
 				break;
-			//case "date" is a bit tricky and im not sure if it works 
+			//case "dateTime" in the format of YYYY-MM-DD HH:MM:SS
 			case "date":
+				//split date and time up (find the space )
 				$dateTimeArr = explode(' ', $row[$col["label"]]);
+				//split month up into Year,Month,Day 
     			$dateArr = explode('-', $dateTimeArr[0]);
+				//split date up into hour,min,sec 
     			$timeArr = explode(':', $dateTimeArr[1]);
+				//set each veriable
     			$year = $dateArr[0];
     			$month = $dateArr[1] - 1;  // months are zero-indexed
     			$day = $dateArr[2];
     			$hour = $timeArr[0];
     			$min = $timeArr[1];
     			$sec = $timeArr[2];
+				//make the cell
 				$cells[] = array('v' => "Date($year, $month, $day, $hour, $min, $sec)");
 				break;
 			
 		}
 	}
 	
-	//add the array of cess to the rows array in the table
+	//add the array of ceslls to the rows array in the table
 	$table['rows'][] = array('c' => $cells);
 }
 
-//send to javascript
+//encode to a jason and printit out for javascript
 echo( json_encode($table) );
 
 
