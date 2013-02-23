@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+    
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+     var q = "SELECT TABLE_NAME, AVG_ROW_LENGTH  FROM TABLES "+
+     " where AVG_ROW_LENGTH > 0  ORDER BY AVG_ROW_LENGTH DESC 	LIMIT 0, 20";
+     var db = "information_schema";
+     
+     document.write('<a href="http://localhost/capstoneFiles/php/getData.php?q='+encodeURIComponent(q)+'&dbs='+encodeURIComponent(db)+'">debug Link</a>');
+    
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "getData.php?q="+encodeURIComponent(q)+"&dbs="+encodeURIComponent(db),
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+      // Create our data table out of JSON data loaded from server.
+      var data = new google.visualization.DataTable(jsonData);
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, {width: 500, height: 340});
+    }
+
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
