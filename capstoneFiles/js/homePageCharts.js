@@ -6,14 +6,14 @@ jQuery(document).ready(function($) {
 
 //Create a function to make a chart see Chars.js for some of the functions uses
 //then run that fuction with a new Chart('div_id')
-drawChart1(new Chart('div3') );	
+var chart1 = drawChart1(new Chart('div3') );	
 drawChart2(new Chart('div1') );
 drawTable(new Chart('div2') );
-	
+
 	
 
  
-//draws a test area chart
+//draws a test area chart returns the index number of this chart in charts array in Charts.js
 function drawChart1(c) {
 	//c is a chart object (this of this function as a "constructor" to populate chart data)
 	// this is populateing the three veriables in the Chart object (chart,data,options)
@@ -43,7 +43,9 @@ function drawChart1(c) {
 	
         //draw the chart
 		c.draw();	
-
+		
+		// you can save the index number of the Chart with this to update the c.data later... not working yet
+		return charts.indexOf( c );
 }
 
 
@@ -75,7 +77,8 @@ function drawChart2(c) {
       c.chart = new google.visualization.PieChart(document.getElementById(c.div));
       c.draw();
     
-	
+	// you can save the index number of the Chart with this to update the c.data later... not working yet
+		return charts.indexOf( c );
 }
 
 
@@ -96,7 +99,8 @@ function drawTable(c) {
 	  c.chart = new google.visualization.Table(document.getElementById(c.div));
 		
 	  c.draw();
-	
+	// you can save the index number of the Chart with this to update the c.data later... not working yet
+		return charts.indexOf( c );
 }
 
 

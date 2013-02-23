@@ -28,7 +28,10 @@ function Chart( div){
 		
 	//stores the new chart to charts array if div exists
 	if(isDiv(div)) 
+	{
 	charts.push(this);
+
+	}
 }
 //Chart Method (draws the chart)
 Chart.prototype.draw = function(){
@@ -66,6 +69,27 @@ function isDiv(c){
 		}
 	//is some type of div
 		return true;
+	
+}
+//remove chart from charts array
+function deleteChart(divId)
+{
+	for (var i = 0; i < charts.length; i++){
+    	if(charts[i].id == divId){
+    		charts.splice(charts.indexOf( c ),1);
+    		break;
+    	}
+	}
+	
+}
+function getChart(divId)
+{
+	for (var i = 0; i < charts.length; i++){
+    	if(charts[i].id == divId){
+    		return charts[i];
+    		break;
+    	}
+	}
 	
 }
 
