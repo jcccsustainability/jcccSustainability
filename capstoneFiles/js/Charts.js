@@ -35,7 +35,6 @@ function Chart( div){
 }
 //Chart Method (draws the chart)
 Chart.prototype.draw = function(){
-	if(isDiv(this))
 		this.chart.draw(this.data, this.options);
 }
 /////////////////////////////////////////////
@@ -82,6 +81,7 @@ function deleteChart(divId)
 	}
 	
 }
+//returns a Chart by ID
 function getChart(divId)
 {
 	for (var i = 0; i < charts.length; i++){
@@ -97,8 +97,9 @@ function getChart(divId)
 //when window is ever resized this will be called
 window.onresize = function(event) {
 	//checks is campus map is showing and resizes it
-	if(document.getElementById('map') !== null)
+	if(isDiv('map'))
 		document.getElementById('map').style.width = document.getElementById('mapSize').offsetWidth + "px";
+	
 	//resize each chart in charts array
 	for (var i = 0; i < charts.length; i++){
     	charts[i].draw();	
