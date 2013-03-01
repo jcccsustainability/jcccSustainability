@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>getColors</title>
+	</head>
+	<body>
+		
+		
+		<script>
+			var buildings = new Array("ATB","CC","CLB","COM","CSB","GEB","GYM","HCDC","HSC","ITC","LIB","NMOCA","OCB","PA","RC","SC","SCI","WH","WLB");
+			var colors = new Array (245,245,255);
+			var shade = 5;
+			for(var i = 0; i<buildings.length; i++){
+				print(buildings[i]);
+				colors[0] -= 10;
+				colors[1] -= 10;
+			}
+			
+			function print(n){
+				var out = '<div style="border-width:1px; border-style:solid; width: 400px; padding-top:5px;">'+n+'';
+				
+				out += '<div style=" border-width:0px; border-top-width:1px; border-style:solid; background-color: rgb('+colors[0]+','+colors[1]+','+colors[2]+'); width: 400px; height: 50px;  ">';
+				out += 'Sun: rgb('+colors[0]+','+colors[1]+','+colors[2]+')';
+				
+				out += '<div style=" float:right;background-color: rgb('+colors[0]+','+colors[1]+','+colors[2]+'); width: 50%; height: 50px;  border-width:0px; border-left-width:1px; border-style:solid;">';
+				out += 'Shade: rgb('+(colors[0]-shade)+','+(colors[1]-shade)+','+(colors[2])+')';
+				
+				out += "</div></div></div><br/>";
+				document.write(out)
+			}
+			
+			
+			
+			function RGB(h){
+				var rtn = new Array();
+				rtn[0] = hexToR(h);
+				rtn[1] = hexToG(h);
+				rtn[2] = hexToB();
+				return rtn;
+			}
+			function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
+			function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
+			function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
+			function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+			
+			
+			
+		</script>
+		
+		
+	
+	</body>
+</html>
+

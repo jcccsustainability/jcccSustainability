@@ -1,6 +1,22 @@
+<html>
+    <head>
+    	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<style type="text/css">
+
+.building{ 
+	fill:black;
+}
+
+
+</style>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        
      
    	       
-        jQuery(document).ready(function($){
+        $(document).ready(function () {
         	
         	//will hold the svg file to load in
         	var svgData;
@@ -11,7 +27,7 @@
 			
 			//gets the the custom MAP svg (with css classes applied to each svg <path> and removed the style from each svg <path> )
 			$.ajax({
-	        url: "../capstoneFiles/images/MAP.svg.txt",
+	        url: "../images/MAP.svg.txt",
 	        async: false,   
 	        cache: false,   
 	        dataType: "text",  // jQuery will infer this, but you can set explicitly
@@ -23,10 +39,7 @@
 	
 		//load the svg in to the map div
 		$("#map").html(svgData);
-		//resize div and and perserve aspect ratio
-		document.getElementById('map').style.height = (document.getElementById('map').offsetWidth)*(468/804) + "px";
-
-	
+		
 		
 			//get building name and edit each class' fill in the svg <shapes>
 			 for(var j = 0; j<buildingNames.length;j++)
@@ -106,4 +119,20 @@ return "0123456789ABCDEF".charAt((n-n%16)/16)
 + "0123456789ABCDEF".charAt(n%16);
 }
 			
-	
+		
+        
+      
+        </script>
+    </head>
+    <body >
+    	
+    	
+
+    	<div id="map" >
+    	</div>
+
+    	
+        
+       
+     </body>
+</html>

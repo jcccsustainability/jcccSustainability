@@ -98,8 +98,7 @@ function getChart(divId)
 window.onresize = function(event) {
 	//checks is campus map is showing and resizes it
 	if(isDiv('map'))
-		document.getElementById('map').style.width = document.getElementById('mapSize').offsetWidth + "px";
-	
+		document.getElementById('map').style.height = (document.getElementById('map').offsetWidth)*(468/804) + "px";
 	//resize each chart in charts array
 	for (var i = 0; i < charts.length; i++){
     	charts[i].draw();	

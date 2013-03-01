@@ -1,0 +1,185 @@
+<html>
+    <head>
+    	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<style type="text/css">
+
+.building{ 
+	fill:green;
+}
+
+
+</style>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        //list of all building names as an array
+     	    var buildingNames = new Array("ATB","CC","CLB","COM","CSB","GEB","GYM","HCDC","HSC","ITC","LIB","NMOCA","OCB","PA","RC","SC","SCI","WH","WLB");
+			// rgb colors starting at ATB and moving down
+			var colors = new Array (245,245,255);
+			
+			
+        function Building()
+        {
+        	this.name = "";
+        	this.sun = "";
+        	this.shade = "";
+
+        	 	
+        }
+       
+        var shade = 5;
+        var newBuildings = new Array();
+
+
+
+   	       
+        $(document).ready(function () {
+        	var svgOptions = '<svg id="resultsvg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 802 465" >';
+        	
+        	//will hold all paths
+        	var svgData = '';
+ 			
+     	  
+			
+			//get the svg paths and hold it svg Data so we can modify the colors
+			$.ajax({
+	        url: "map.txt",
+	        async: false,   // asynchronous request? (synchronous requests are discouraged...)
+	        cache: false,   // with this, you can force the browser to not make cache of the retrieved data
+	        dataType: "text",  // jQuery will infer this, but you can set explicitly
+	        success: function( data, textStatus, jqXHR ) {
+	            svgData = data; // can be a global variable too...
+	            // process the content...
+	        }
+	    	});
+	    	
+	    	
+	    	
+	    	
+	    	//this just makes the image a little better looking
+	    	svgData = svgData.replace(RegExp('b1b1b1','g'),'000000');
+			svgData = svgData.replace(RegExp('ffffff','g'),'000000');
+			
+			
+	    	makeBildings();
+	    	for(var i = 0; i<newBuildings.length;i++){
+	    	
+	    	
+	    		svgData = svgData.replace(
+	    			RegExp('style="fill:#'+(newBuildings[i].sun) +';fill-opacity:1"','g'), 
+	    		           'class="building '+newBuildings[i].name+'sun"');
+	    								  
+	    		svgData = svgData.replace(
+	    			RegExp('style="fill:#'+newBuildings[i].shade +';fill-opacity:1"','g'), 
+	    		           'class="building '+newBuildings[i].name+'shade"');
+	    		           
+			}
+			
+			
+        	$("#holder").html(svgOptions+svgData+'</svg>');
+        	
+        	
+        	
+        	
+
+        	$("#text").html('<textarea rows="10" cols="50" >'+svgOptions+svgData+'</svg></textarea>');
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	function makeBildings(){
+        		 for(var j = 0; j<buildingNames.length;j++)
+       		{
+       			var tmpBuilding = new Building();
+       			//set name to the array of names
+       			tmpBuilding.name = buildingNames[j];
+      			//set the old colers (the colers of the svg)
+				tmpBuilding.sun = HEXP(colors[0],colors[1],255).toLowerCase();
+				tmpBuilding.shade = HEXP(colors[0]-shade,colors[1]-shade,255).toLowerCase();
+				//pepaire for next time through loop
+				colors[0] -= 10;
+				colors[1] -= 10;
+				
+				//get a random number to change the color for the orignal svg to the new svg (find and repace)
+				//var rand = Math.floor(Math.random() * 100) + 1;
+				//set the new colors
+				//tmpBuilding.sun = HEXP( getRed(rand), getGreen(rand),0 ).toLowerCase();
+				//tmpBuilding.shade = HEXP(  getRed(rand)-70,  getGreen(rand)-70,  0  ).toLowerCase();
+       			newBuildings.push(tmpBuilding);
+       			
+       		}
+        	}
+        	
+        	
+        	
+        	  		function getGreen(percent){
+	//if it is less than 50 it will just return full green (adusted for color intentsity)
+	if(percent<=50)
+		return 255;
+	else
+		//it will return some green (adusted for color intentsity)
+		return (255-((percent-50)/50)*255);
+}
+function getRed(percent){
+	//if it is less than 50 it will just return full red (adusted for color intentsity)
+	if(percent<=50)
+		return (percent/50)*255;
+	else
+		//it will return full red (adusted for color intentsity)
+		return 255;
+}
+       		
+       		
+     	  
+     	   	 function HEXP(r,g,b) { 
+     	   	return toHex(r)+toHex(g)+toHex(b);
+     	   	
+     	   	 }
+			
+			function toHex(n) {
+ 				n = parseInt(n,10);
+ 				if (isNaN(n)) return "00";
+ 				n = Math.max(0,Math.min(n,255));
+ 				return "0123456789ABCDEF".charAt((n-n%16)/16)
+ 				     + "0123456789ABCDEF".charAt(n%16);
+			}
+			
+
+	
+
+
+        });
+        
+        
+        </script>
+    </head>
+    <body >
+    	
+    	<div id="holder" style="width: 300px; height: 300px;">
+    
+    	</div>
+    	If every building above is green that is a success! and classes have been applied (this only runs in Chrome)<br/>
+    	Copy and Past code into MAP.svg.txt <br/>
+    	<div id="text" style="border-top: 3px; border-style: solid; padding: 5px">
+    		
+    	</div>
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+
+    	
+    	
+        
+       
+     </body>
+</html>
