@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<style>
+		body {
+	background-color:  #5B5B5F;
+    overflow-x: hidden;
+}
+
+#f { 
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.boarder{
+	border-style: solid;
+    border-width: 30px;
+    border-bottom-width: 100px;
+    border-color: #000000;
+    -moz-border-radius: 30px;
+border-radius: 30px;
+}
+#buttons{
+	
+
+	 width: 100%;
+	 height: 30px;
+    position: absolute;
+    top: 0px; 
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+}
+#txt{
+	background-color:rgba(244,244,244,.5);
+	color:#DFDFDF;
+	 height: 30px;
+    position: absolute;
+    top: 0px; 
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+
+.btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.btn:hover {
+	background-color:#dfdfdf;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
+
+#wrap { 
+    width: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    bottom: 0;
+}
+
+
+	</style>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Window Test</title>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+        
+        	
+        	$('#buttons').delay(600).fadeTo(600, .6);
+        	$('#buttons').hover(function() {
+   				 $(this).fadeTo(100, .9);
+			}, function() {
+  				  $(this).fadeTo(600, .6);
+			});
+        	
+        	 $("#full").click(function () {
+				$('#f').width('100%');
+				$('#f').removeClass('boarder');
+				$('#wrap').css("top","0px" )
+				$('#wrap').css("bottom","0px" )
+				$('#txt').text('');
+				});
+		
+		
+				$("#phone").click(function () {
+				$('#f').width('640px');
+				$('#f').addClass('boarder');
+				$('#wrap').css("top","35px" )
+				$('#wrap').css("bottom","55px" )
+				$('#f').height('960px');
+				$('#txt').text( "640x960");
+				});
+				
+			
+				
+				$("#tablet").click(function () {
+				$('#f').width('1024px');
+				$('#f').height('1024px');
+				$('#f').addClass('boarder');
+				$('#wrap').css("top","35px" )
+				$('#wrap').css("bottom","35px" )
+				$('#txt').text('1024×1024');
+				});
+				
+				$("#phonesm").click(function () {
+				$('#f').width('480px');
+				$('#f').addClass('boarder');
+				$('#wrap').css("top","35px" );
+				$('#wrap').css("bottom","35px" );
+				$('#txt').text('480×800');
+				});
+				$("#phoness").click(function () {
+				$('#f').width('270px');
+				$('#f').addClass('boarder');
+				$('#wrap').css("top","35px" );
+				$('#wrap').css("bottom","35px" );
+				$('#txt').text('240×320');
+				});
+				
+				$("#x").click(function () {
+					window.location = "http://localhost/site/";
+				});
+				
+			window.setInterval(function(){
+				$('#f').height(  document.getElementById('f').contentWindow.document.body.scrollHeight + "px" )
+					},500);
+		});
+        </script>
+	</head>
+	<body>
+		
+	<center>
+		
+		<h2> <div id="txt"</div> </h2>
+		
+		
+		<div id="buttons">
+	<a  href="#"  class='btn' id='full'>Desktop</a>
+	<a  href="#" class='btn' id='tablet'>Tablet</a>
+	<a  href="#" class='btn' id='phone'>iPhone</a>
+	<a href="#"  class='btn' id='phonesm'>Smaller Phone</a>
+	<a href="#"  class='btn' id='phoness'>Ex. small</a>
+	<a  href="#" class='btn' id='x'>X</a>
+	  </div>
+	  
+	
+		<div id="wrap"> 
+    <iframe align="middle" id="f" scrolling="no" frameBorder="0" src="http://localhost/site/"></iframe>
+		</div> 
+	</center>
+	</body>
+</html>
+
