@@ -2,15 +2,17 @@
 
 //runs after site has fully loaded (sort of like main... but you can have functions inside)
 //use $( "#divid") to edit the div with jQuery
+var pieChart;
+var table;
 jQuery(document).ready(function($) {
 
 //Create a function to make a chart see Chars.js for some of the functions uses
 //then run that fuction with a new Chart('div_id')
-var chart1 = drawChart1(new Chart('div3') );	
-drawChart2(new Chart('div1') );
-drawTable(new Chart('div2') );
+drawChart1(new Chart('div3') );	
+pieChart= drawChart2(new Chart('div1') );
+table = drawTable(new Chart('div2') );
 
-	
+
 
  
 //draws a test area chart returns the index number of this chart in charts array in Charts.js
@@ -109,6 +111,44 @@ function drawTable(c) {
 	
 });
 //end of jquery 
+function updateTablePrototype() {
+
+	var c = charts[table];
+		//get google Jason from php (php/getData.php)
+      var jsonData = jQuery.ajax({
+          url: "../capstoneFiles/php/getDataMS.php?",
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+      // Create a data table out of JSON object loaded from php
+      c.data = new google.visualization.DataTable(jsonData);	
+			
+			
+			
+	  
+	  c.options = {showRowNumber: true, width: '100%'};
+	  // Create and draw the visualization.
+	  c.chart = new google.visualization.Table(document.getElementById(c.div));
+		
+	  c.draw();
+	  
+	  c = charts[pieChart];
+		
+      c.data = new google.visualization.DataTable(jsonData);	
+			
+			
+			
+	  
+	  c.options = { 'title':'Testing Temp',
+	  			height:'350'
+                     };
+	  // Create and draw the visualization.
+	 c.chart = new google.visualization.BarChart(document.getElementById(c.div));
+		
+	  c.draw();
+
+}
 
 
 

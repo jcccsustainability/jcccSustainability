@@ -7,6 +7,7 @@
         	
  			//list of all building names as an array
      	    var buildingNames = new Array("ATB","CC","CLB","COM","CSB","GEB","GYM","HCDC","HSC","ITC","LIB","NMOCA","OCB","PA","RC","SC","SCI","WH","WLB");
+			var buildingNamesFull = new Array("Arts & Technology","Carlsen Center","Classroom Laboratory","Commons","Campus Services","General Education","Gymnasium","Hiersteiner Child Development Center","Horticulture Science Center","Industrial Training Center","Billington Library","Nerman Museum of Contemporary Art","Office and Classroom","Police Academy","Regnier Center","Student Center","Science Building","Warehouse","Welding Laboratory Building");
 			
 			
 			//gets the the custom MAP svg (with css classes applied to each svg <path> and removed the style from each svg <path> )
@@ -25,7 +26,8 @@
 		$("#map").html(svgData);
 		//resize div and and perserve aspect ratio
 		document.getElementById('map').style.height = (document.getElementById('map').offsetWidth)*(468/804) + "px";
-
+		  //set the  on rollover finger aka pointer
+			$('.building').css('cursor','pointer');
 	
 		
 			//get building name and edit each class' fill in the svg <shapes>
@@ -50,9 +52,7 @@
 				
        		}
        		
-      	
-       
-			
+
 			
 //all buildings have a building class and eather a BUILDINGNAMEsun or BUILDINGNAMEshad class
 //when any building is clicked this fires		
@@ -63,9 +63,27 @@ $(".building").click(function() {
       name = name.replace("sun",'');
       name = name.replace("shade",'');
       //run another function that returns the name
-      alert("building "+name+" clicked")
+      //alert("building "+name+" clicked")
+      for(var i = 0; i<buildingNames.length;i++ )
+      {//fill-opacity:
+      	if(name != buildingNames[i]){
+      		$('.'+buildingNames[i]+'sun').fadeTo(1,0);
+			$('.'+buildingNames[i]+'shade').fadeTo(1,0);
+		}
+		else{
+			$("#name").html( "<h1>"+buildingNamesFull[i]+"</h1>");
+			$('.'+buildingNames[i]+'sun').fadeTo(1,1);
+			$('.'+buildingNames[i]+'shade').fadeTo(1,1);
+		}
+      }
+      
+      updateTablePrototype();
+      	
   });
   
+
+
+ 
 });//end of JQUERY
        		
 ///////////////////////////////////////////////////////////////////////////
