@@ -1,13 +1,15 @@
-     
+	     
    	       
         jQuery(document).ready(function($){
         	
         	//will hold the svg file to load in
         	var svgData;
+        	//holds colors for buildings by php sql query
+        	var colorData;
         	
  			//list of all building names as an array
-     	    var buildingNames = new Array("ATB","CC","CLB","COM","CSB","GEB","GYM","HCDC","HSC","ITC","LIB","NMOCA","OCB","PA","RC","SC","SCI","WH","WLB");
-			var buildingNamesFull = new Array("Arts & Technology","Carlsen Center","Classroom Laboratory","Commons","Campus Services","General Education","Gymnasium","Hiersteiner Child Development Center","Horticulture Science Center","Industrial Training Center","Billington Library","Nerman Museum of Contemporary Art","Office and Classroom","Police Academy","Regnier Center","Student Center","Science Building","Warehouse","Welding Laboratory Building");
+     	    var buildingNames = new Array("ATB","CC","CLB","GEB__COM","CSB","GYM","HCDC","HSC","ITC","LIB","NMOCA","OCB","PA","RC","SC","SCI","WH","WLB");
+			var buildingNamesFull = new Array("Arts & Technology","Carlsen Center","Classroom Laboratory","Commons / General Education","Campus Services","Gymnasium","Hiersteiner Child Development Center","Horticulture Science Center","Industrial Training Center","Billington Library","Nerman Museum of Contemporary Art","Office and Classroom","Police Academy","Regnier Center","Student Center","Science Building","Warehouse","Welding Laboratory Building");
 			
 			
 			//gets the the custom MAP svg (with css classes applied to each svg <path> and removed the style from each svg <path> )
@@ -20,6 +22,19 @@
 	            svgData = data;
 	        }
 	    	});
+	    	
+	    	//get building tempitures
+	    	$.ajax({
+	        url: "../capstoneFiles/php/getColors.php",
+	        async: false,   
+	        cache: false,   
+	        dataType: "text",  // jQuery will infer this, but you can set explicitly
+	        success: function( data, textStatus, jqXHR ) {
+	            colorData = data;
+	        }
+	    	});
+	    	
+	    	 var colorPercent = colorData.split(' ')
 	    	
 	
 		//load the svg in to the map div
@@ -34,13 +49,15 @@
 			 for(var j = 0; j<buildingNames.length;j++)
        		{
 				//get a random number to change the color to for now(testing)
-				var rand = Math.floor(Math.random() * 100) + 1;
-				
-				//set add a # and the new colors as hex
-				sun = '#'+HEXP( getRed(rand), getGreen(rand),0 ).toLowerCase();
-				//get the same color as above but make it darker for shade
-				shade = '#'+ HEXP(  getRed(rand)-70,  getGreen(rand)-70,  0  ).toLowerCase();
-				
+				var rand = colorPercent[j];
+				if(rand != "gray"){
+					setBuildingColor(buildingNames[j], rand);
+				}
+				else 
+				{
+					setBuildingGray(buildingNames[j]);
+
+				}
 				//set the svg/css peroperty fill to the new colors
 				//the '.' tells jQuery to find a css class
 				//buildingNames[j] is the building name liek "ATB" 
@@ -67,8 +84,8 @@ $(".building").click(function() {
       for(var i = 0; i<buildingNames.length;i++ )
       {//fill-opacity:
       	if(name != buildingNames[i]){
-      		$('.'+buildingNames[i]+'sun').fadeTo(1,0);
-			$('.'+buildingNames[i]+'shade').fadeTo(1,0);
+      		$('.'+buildingNames[i]+'sun').fadeTo(1,.5);
+			$('.'+buildingNames[i]+'shade').fadeTo(1,.5);
 		}
 		else{
 			$("#name").html( "<h1>"+buildingNamesFull[i]+"</h1>");
@@ -77,15 +94,37 @@ $(".building").click(function() {
 		}
       }
       
-      updateTablePrototype();
+      updateTablePrototype(name);
       	
   });
   
 
-
+function setBuildingColor(bld, percent) {
+	  
+      	if( $('.'+bld+"sun") )
+      	{
+      		sun = '#'+HEXP( getRed(percent), getGreen(percent),0 ).toLowerCase();
+			shade = '#'+ HEXP(  getRed(percent)-70,  getGreen(percent)-70,  0  ).toLowerCase();
+			$('.'+bld+'sun').css('fill',sun);
+			$('.'+bld+'shade').css('fill',shade);
+      	}
+  }
+function setBuildingGray(bld) {
+	  
+      	if( $('.'+bld+"sun") )
+      	{
+      		sun = '#'+HEXP( 125, 125,125 ).toLowerCase();
+			shade = '#'+ HEXP(  125-70,  125-70,  125-70  ).toLowerCase();
+			$('.'+bld+'sun').css('fill',sun);
+			$('.'+bld+'shade').css('fill',shade);
+      	}
+  }
  
 });//end of JQUERY
-       		
+
+
+
+  		
 ///////////////////////////////////////////////////////////////////////////
 //functions       		
        		

@@ -45,8 +45,9 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 //$sqlTypes["VAR_STRING"]; will return "string"
 $sqlTypes = array (
 "VAR_STRING" => "string",
+"NEWDECIMAL" => "number",
 "LONGLONG" => "number",
-"DATETIME" => "date"
+"DATETIME" => "string"
 );
 
 

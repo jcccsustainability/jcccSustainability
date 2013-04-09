@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 
 //Create a function to make a chart see Chars.js for some of the functions uses
 //then run that fuction with a new Chart('div_id')
-drawChart1(new Chart('div3') );	
+div3 = drawChart1(new Chart('div3') );	
 pieChart= drawChart2(new Chart('div1') );
 table = drawTable(new Chart('div2') );
 
@@ -55,10 +55,12 @@ function drawChart1(c) {
 function drawChart2(c) {
 
 	//set a mySql query
-	 var q = "SELECT TABLE_NAME, AVG_ROW_LENGTH  FROM TABLES "+
-     " where AVG_ROW_LENGTH > 0  ORDER BY AVG_ROW_LENGTH DESC 	LIMIT 0, 20";
+	 var q = "SELECT DATE_FORMAT(TIME,'%c/%e/%Y %h%p') , CC_TEMP as CC FROM test7 "+
+	 "WHERE TIME BETWEEN  '2012-09-07' AND  '2012-09-08' "+
+	 "AND CC_TEMP IS NOT NULL "+
+	 "ORDER BY  Time ASC "; 
     //set the database
-     var db = "information_schema";
+     var db = "mstomytest";
      //dbug link (retruns link to find php/mySQL errors)...
     // console.debug('http://localhost/capstoneFiles/php/getData.php?q='+encodeURIComponent(q)+'&dbs='+encodeURIComponent(db));
  	
@@ -72,11 +74,11 @@ function drawChart2(c) {
       // Create a data table out of JSON object loaded from php
       c.data = new google.visualization.DataTable(jsonData);
       //set some options (pie charts need a height)
-	  c.options = { 'title':'Testing SQL to google chart',
-	  			height:'250'
+	  c.options = { 'title':'Testing SQL TEMP one week',
+	  			height:'350'
                      };
       // create and draw pie chart
-      c.chart = new google.visualization.PieChart(document.getElementById(c.div));
+      c.chart = new google.visualization.AreaChart(document.getElementById(c.div));
       c.draw();
     
 	// you can save the index number of the Chart with this to update the c.data later... not working yet
@@ -111,42 +113,44 @@ function drawTable(c) {
 	
 });
 //end of jquery 
-function updateTablePrototype() {
+function updateTablePrototype(building) {
 
-	var c = charts[table];
-		//get google Jason from php (php/getData.php)
+	var c = charts[pieChart];
+	//set a mySql query
+	 
+	 var q = "SELECT DATE_FORMAT(testFinal.TIME,'%c/%e/%Y %h%p') , testFinal."+building+"_TEMP as '"+building+" Temp' , weather3.temp as 'Outside' "+
+	 " FROM testFinal LEFT JOIN weather3 ON weather3.time = testFinal.time "+
+	 " WHERE testFinal.TIME BETWEEN  '2012-09-07' AND  '2012-9-14' "+
+	 "AND weather3.temp > 10 ORDER BY  `testFinal`.`Time` DESC"; 
+
+    //set the database
+     var db = "mstomytest";
+     //dbug link (retruns link to find php/mySQL errors)...
+    // console.debug('http://localhost/capstoneFiles/php/getData.php?q='+encodeURIComponent(q)+'&dbs='+encodeURIComponent(db));
+ 	
+ 	//get google Jason from php (php/getData.php)
       var jsonData = jQuery.ajax({
-          url: "../capstoneFiles/php/getDataMS.php?",
+          url: "../capstoneFiles/php/getData.php?q="+encodeURIComponent(q)+"&dbs="+encodeURIComponent(db),
           dataType:"json",
           async: false
           }).responseText;
           
       // Create a data table out of JSON object loaded from php
-      c.data = new google.visualization.DataTable(jsonData);	
-			
-			
-			
-	  
-	  c.options = {showRowNumber: true, width: '100%'};
-	  // Create and draw the visualization.
-	  c.chart = new google.visualization.Table(document.getElementById(c.div));
-		
-	  c.draw();
-	  
-	  c = charts[pieChart];
-		
-      c.data = new google.visualization.DataTable(jsonData);	
-			
-			
-			
-	  
-	  c.options = { 'title':'Testing Temp',
-	  			height:'350'
+      c.data = new google.visualization.DataTable(jsonData);
+      //set some options (pie charts need a height)
+	  c.options = { 'title':'mySQL '+building+'building TEMP one week',
+	  			height:'350',
+	  			seriesType: "area",
+          		series: {1: {type: "line"}},
+          		colors: ['#53777A', '#542437', '#ec8f6e', '#f3b49f', '#f6c7b6']
                      };
-	  // Create and draw the visualization.
-	 c.chart = new google.visualization.BarChart(document.getElementById(c.div));
-		
-	  c.draw();
+      // create and draw pie chart
+      c.chart = new google.visualization.ComboChart(document.getElementById(c.div));
+      c.draw();
+      
+      
+     
+
 
 }
 
