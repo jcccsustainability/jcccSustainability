@@ -62,10 +62,14 @@ $table = array();
 $table['cols'] = array();
 
 //add each col to the data table as $table['cols']
+
 for($i = 0; $i < $colCount; $i++){
 	//get and hold all the meta data for this col as an array
 	$table_fields  = $query->getColumnMeta($i);
-	
+	if($i == 0)
+	$table['cols'][] = array('label' => $table_fields["name"], 
+		                      'type' => "string");
+	else
 	//add the google's dataTable label name and data type
 	$table['cols'][] = array('label' => $table_fields["name"], 
 		                      'type' => $sqlTypes[$table_fields["native_type"]]);
@@ -80,9 +84,15 @@ foreach ($results as $row) {
 //creat a array to hold each cell in a single row
   	$cells = array();  
 	//get each cell by row(foreach above) and column (foreach below)
+	$isFirst = TRUE;
 	foreach($table['cols'] as $col)
 	{
 		//get the col's type so the cell can be cassed for google charts 
+		if($isFirst){
+			$cells[] = array('v' => $row[$col["label"]]);
+			$isFirst = FALSE;
+		}
+		else
 		switch($col["type"]){
 			//if its a number cast to a double to be on the safe side
 			case "number":

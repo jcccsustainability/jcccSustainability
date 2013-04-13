@@ -2,15 +2,15 @@
 
 //runs after site has fully loaded (sort of like main... but you can have functions inside)
 //use $( "#divid") to edit the div with jQuery
-var pieChart;
+var div1;
 var table;
 jQuery(document).ready(function($) {
 
 //Create a function to make a chart see Chars.js for some of the functions uses
 //then run that fuction with a new Chart('div_id')
-div3 = drawChart1(new Chart('div3') );	
-pieChart= drawChart2(new Chart('div1') );
-table = drawTable(new Chart('div2') );
+//div3 = drawChart1(new Chart('div3') );	
+div1 = drawChart2(new Chart('div1') );
+//table = drawTable(new Chart('div2') );
 
 
 
@@ -55,7 +55,7 @@ function drawChart1(c) {
 function drawChart2(c) {
 
 	//set a mySql query
-	 var q = "SELECT DATE_FORMAT(TIME,'%c/%e/%Y %h%p') , CC_TEMP as CC FROM test7 "+
+	 var q = "SELECT DATE_FORMAT(TIME,'%c/%e/%Y %h%p') , CC_TEMP as CC FROM buildings "+
 	 "WHERE TIME BETWEEN  '2012-09-07' AND  '2012-09-08' "+
 	 "AND CC_TEMP IS NOT NULL "+
 	 "ORDER BY  Time ASC "; 
@@ -75,7 +75,7 @@ function drawChart2(c) {
       c.data = new google.visualization.DataTable(jsonData);
       //set some options (pie charts need a height)
 	  c.options = { 'title':'Testing SQL TEMP one week',
-	  			height:'350'
+	  			height:'250'
                      };
       // create and draw pie chart
       c.chart = new google.visualization.AreaChart(document.getElementById(c.div));
@@ -113,47 +113,102 @@ function drawTable(c) {
 	
 });
 //end of jquery 
-function updateTablePrototype(building) {
 
-	var c = charts[pieChart];
+
+function updateTablePrototype(toggle) {
+//joomal turns off jquery this function($) is to get the jQuerys $ back	
+(function($) {
+	var c = charts[div1];
+	
 	//set a mySql query
-	 
-	 var q = "SELECT DATE_FORMAT(testFinal.TIME,'%c/%e/%Y %h%p') , testFinal."+building+"_TEMP as '"+building+" Temp' , weather3.temp as 'Outside' "+
-	 " FROM testFinal LEFT JOIN weather3 ON weather3.time = testFinal.time "+
-	 " WHERE testFinal.TIME BETWEEN  '2012-09-07' AND  '2012-9-14' "+
-	 "AND weather3.temp > 10 ORDER BY  `testFinal`.`Time` DESC"; 
-
-    //set the database
+	 var table = "buildings";
+	 //set the database
      var db = "mstomytest";
-     //dbug link (retruns link to find php/mySQL errors)...
-    // console.debug('http://localhost/capstoneFiles/php/getData.php?q='+encodeURIComponent(q)+'&dbs='+encodeURIComponent(db));
- 	
- 	//get google Jason from php (php/getData.php)
-      var jsonData = jQuery.ajax({
-          url: "../capstoneFiles/php/getData.php?q="+encodeURIComponent(q)+"&dbs="+encodeURIComponent(db),
-          dataType:"json",
-          async: false
-          }).responseText;
-          
-      // Create a data table out of JSON object loaded from php
-      c.data = new google.visualization.DataTable(jsonData);
-      //set some options (pie charts need a height)
-	  c.options = { 'title':'mySQL '+building+'building TEMP one week',
-	  			height:'350',
-	  			seriesType: "area",
-          		series: {1: {type: "line"}},
-          		colors: ['#53777A', '#542437', '#ec8f6e', '#f3b49f', '#f6c7b6']
-                     };
-      // create and draw pie chart
-      c.chart = new google.visualization.ComboChart(document.getElementById(c.div));
-      c.draw();
-      
-      
      
+	 //get building as query or get all building quiry
+	 if(building != "all" ){
+		 var q = "SELECT DATE_FORMAT(TIME,'%c/%e %h%p') , "+building+"_"+type+" as '"+building+" "+type+"' , weather as 'Outside' "+
+		 " from "+table+
+		 " WHERE TIME BETWEEN  '"+date[0]+"' AND  '"+date[1]+"' and weather is not null"+
+		 " ORDER BY time ASC "; 
+		 
+		 
+	 	//get google Jason from php (php/getData.php)
+	      var jsonData = jQuery.ajax({
+	          url: "../capstoneFiles/php/getData.php?q="+encodeURIComponent(q)+"&dbs="+encodeURIComponent(db),
+	          dataType:"json",
+	          async: false
+	          }).responseText;
+	          
+	      // Create a data table out of JSON object loaded from php
+	      c.data = new google.visualization.DataTable(jsonData);
+	      //set some options (pie charts need a height)
+	      if(type == "temp")
+	      	var titleStr = "TEMPITUER";
+	      else
+	      	var titleStr = "Kilowatts per hour"
+		  c.options = { 'title': building+' building (one '+range+')',
+		  			height:'300',
+		  			vAxis: {title: titleStr},
+		  			seriesType: "area",
+	          		series: {1: {type: "line"}},
+	          		colors: [ '#542437','#CAA91E', '#ec8f6e', '#f3b49f', '#f6c7b6']
+	                     };
+	      // create and draw pie chart
+	      c.chart = new google.visualization.ComboChart(document.getElementById(c.div));
+	      c.draw();
+      
+	}
+		if(toggle)
+		{ $("#map").slideToggle(1000);
+			$("#buildingInfo").slideToggle(1000);
+       		
+       		if(isDown){
+       			isDown = false;
+				
+				
+       		}
+       		else
+       		{
+       		 isDown = true;
+       		 
+       		}
+       		 
+       		 
+       		//document.getElementById('map').style.height = (document.getElementById('map').offsetWidth)*(468/804) + "px";
 
+		}
+		
 
+		
+    
+     	
+       //set html for building info here
+       if(building != "all"){
+       	//show and hide animation for 1000 milisconds
+       
+      
+       
+       	var image = '<div style=" float: left; background-color: '+ $('.'+building+'sun').css('fill') +'; display: inline-block; height:105px; width:210px">'+
+			'<img height="100%" width="100%" src="../../capstoneFiles/images/builidngsFixed/'+building+'.png" /> </div>';	
+		
+
+      	var lipsum = image+'<button class="button" onclick=\'building = "all"; updateTablePrototype(true); \'>BACK</button> Info about '+building+' building here <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum nibh, eu accumsan turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam iaculis scelerisque eros, in pretium leo convallis a. Duis congue, justo non auctor vulputate, quam augue vulputate nulla, at vulputate est felis dictum nisl. Nullam aliquet purus ut metus eleifend sed facilisis urna pulvinar. <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ipsum nibh, eu accumsan turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam iaculis scelerisque eros, in pretium leo convallis a.s';
+       $("#buildingInfo").html(lipsum);
+       
+       }
+       else 
+       {
+       	$("#name").html( "<h1>Pick a building</h1>");
+       }
+       
+       
+       
+       
+		
+	})(jQuery);
+	
 }
-
 
 
 

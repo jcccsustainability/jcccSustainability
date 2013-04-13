@@ -2,6 +2,7 @@
 <layout name="desktop">
 	<!--Extra css load for this layout-->
 	<stylesheets>
+                <file media="all">../../../capstoneFiles/js/jQuery/css/dot-luv/jquery-ui-1.10.2.custom.css</file>
 		<file media="all">css/layout.css</file>
 		<file media="all">css/template.css</file>
 		<file media="all">css/modules.css</file>
@@ -16,6 +17,7 @@
 		<file>js/jquery/jquery-1.6.4.min.js</file>
 		<file>js/jquery.masonry.js</file>
 		<file>js/jquery.mediaqueries.js</file>
+<file>../../../capstoneFiles/js/jQuery/js/jquery-ui-1.10.2.custom.min.js</file>
 <file>../../../capstoneFiles/js/colorMap.js</file>
 <file>https://www.google.com/jsapi</file>
 <file>../../../capstoneFiles/js/Charts.js</file>

@@ -93,12 +93,21 @@ function getChart(divId)
 	
 }
 
+var isDown = true;
 
 //when window is ever resized this will be called
 window.onresize = function(event) {
 	//checks is campus map is showing and resizes it
-	if(isDiv('map'))
+	(function($) {
+		
+	if(isDiv('map') && isDown)
+	{
 		document.getElementById('map').style.height = (document.getElementById('map').offsetWidth)*(468/804) + "px";
+		
+		
+	}
+	})(jQuery);
+	
 	//resize each chart in charts array
 	for (var i = 0; i < charts.length; i++){
     	charts[i].draw();	

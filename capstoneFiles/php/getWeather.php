@@ -14,7 +14,7 @@ if (mysqli_connect_errno($MYcon))
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-
+/*
 $sql="CREATE TABLE $MYtable
 	(
 		 
@@ -28,7 +28,7 @@ $sql="CREATE TABLE $MYtable
 	if (mysqli_query($MYcon,$sql)){
 	 echo("succsess!"); 		
 	}
-
+*/
 
 
 
@@ -66,7 +66,7 @@ $date = $date[0];
 
 while(strtotime($date) <= strtotime($end_date) )
 {
-	echo $date."<br>";
+	
 	$dateArray = explode("-", $date);
 	if (($handle = fopen("http://www.wunderground.com/history/airport/KOJC/".$dateArray[0]."/".((int)$dateArray[1])."/".((int)$dateArray[2])."/DailyHistory.html?req_city=Overland+Park&req_state=KS&req_statename=Kansas&theprefset=SHOWMETAR&theprefvalue=1&format=1", "r")) !== FALSE) 
 	{
@@ -74,9 +74,9 @@ while(strtotime($date) <= strtotime($end_date) )
 	    	
 		    if(isset($data[$TemperatureF]) && $data[$TemperatureF] != "TemperatureF" && $data[$TemperatureF] != "" && (int)$data[$TemperatureF] > -90){
 				$dateTime = date ("Y-m-d H:00:00", strtotime("-5 hour", strtotime( substr_replace($data[$DateUTC],'',-6) )));
-				$sql = "INSERT INTO ".$MYtable." (TIME, TEMP)
-						  VALUES ('".$dateTime ."',".$data[$TemperatureF].")";
-		     	echo $sql."<br>";
+				$sql = "INSERT INTO ".$MYtable." (weather)
+						  VALUES (".$data[$TemperatureF].")";
+		     	//echo $sql."<br>";
 				mysqli_query($MYcon,$sql);
 		    }
 		}

@@ -6,6 +6,13 @@
 var KW_TO_CO2 = 0.00070555; // Found this number online
 var KW_TO_COAL = 1.07; // Found this number online
 var COST_IN_DOLLARS = 0.0812; // Number hopefully corrected
+var KW_COLOR = (750.0 / 10); // For KW color, To change interval update number on the left, the 10 is for the color selection
+var TEMP_COLOR = 58.0; // For temp color
+var TEMP_COLOR_RANGE = 3.0; // The range between temperature values
+var CO2_COLOR = (0.5 / 10); // For CO2 color, To change interval update number on the left, the 10 is for the color selection
+var MONEY_COLOR = (60.0 / 10); // For Money color, To change interval update number on the left, the 10 is for the color selection
+var COAL_COLOR = (800.0 / 10); // For Coal color, To change interval update number on the left, the 10 is for the color selection
+var AVG_TEMP_COLOR = (80.0 / 10); // For Average Temperature color, To change interval update number on the left, the 10 is for the color selection
 
 // Converts kilowatts into CO2 metric tons
 function KWtoCO2(co2)
@@ -35,94 +42,94 @@ function KWColor(colorKW)
 	{
 		return 0;
 	}
-	else if(colorKW <= 75)
+	else if(colorKW <= KW_COLOR)
 	{
-		return 1;
+		return 10;
 	}
-	else if(colorKW <= 150)
+	else if(colorKW <= KW_COLOR * 2)
 	{
-		return 2;
+		return 20;
 	}
-	else if(colorKW <= 225)
+	else if(colorKW <= KW_COLOR * 3)
 	{
-		return 3;
+		return 30;
 	}
-	else if(colorKW <= 300)
+	else if(colorKW <= KW_COLOR * 4)
 	{
-		return 4;
+		return 40;
 	}
-	else if(colorKW <= 375)
+	else if(colorKW <= KW_COLOR * 5)
 	{
-		return 5;
+		return 50;
 	}
-	else if(colorKW <= 450)
+	else if(colorKW <= KW_COLOR * 6)
 	{
-		return 6;
+		return 60;
 	}
-	else if(colorKW <= 525)
+	else if(colorKW <= KW_COLOR * 7)
 	{
-		return 7;
+		return 70;
 	}
-	else if(colorKW <= 600)
+	else if(colorKW <= KW_COLOR * 8)
 	{
-		return 8;
+		return 80;
 	}
-	else if(colorKW <= 675)
+	else if(colorKW <= KW_COLOR * 9)
 	{
-		return 9;
+		return 90;
 	}
 	else
 	{
-		return 10;
+		return 100;
 	} // end if
 } // end KWColor
 
 // Converts temp into a number for the color selection
 function TempColor(colorTemp)
 {
-	if(colorTemp <= 58) // For no or bad data
+	if(colorTemp <= TEMP_COLOR) // For no or bad data
 	{
 		return 0;
 	}
-	else if(colorTemp <= 63)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE)))
 	{
-		return 1;
+		return 10;
 	}
-	else if(colorTemp <= 66)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 2)))
 	{
-		return 2;
+		return 20;
 	}
-	else if(colorTemp <= 69)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 3)))
 	{
-		return 3;
+		return 30;
 	}
-	else if(colorTemp <= 72)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 4)))
 	{
-		return 4;
+		return 40;
 	}
-	else if(colorTemp <= 75)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 5)))
 	{
-		return 5;
+		return 50;
 	}
-	else if(colorTemp <= 78)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 6)))
 	{
-		return 6;
+		return 60;
 	}
-	else if(colorTemp <= 81)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 7)))
 	{
-		return 7;
+		return 70;
 	}
-	else if(colorTemp <= 84)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 8)))
 	{
-		return 8;
+		return 80;
 	}
-	else if(colorTemp <= 87)
+	else if(colorTemp <= (TEMP_COLOR + (TEMP_COLOR_RANGE * 9)))
 	{
-		return 9;
+		return 90;
 	}
 	else
 	{
-		return 10;
+		return 100;
 	} // end if
 } // end TempColor
 
@@ -133,44 +140,45 @@ function CO2Color(colorCO2)
 	{
 		return 0;
 	}
-	else if(colorCO2 <= 0.05)
+	else if(colorCO2 <= CO2_COLOR)
 	{
-		return 1;
+		return 10;
 	}
-	else if(colorCO2 <= 0.1)
+	else if(colorCO2 <= CO2_COLOR * 2)
 	{
-		return 2;
+		return 20;
 	}
-	else if(colorCO2 <= 0.15)
-		return 3;
-	}
-	else if(colorCO2 <= 0.2)
+	else if(colorCO2 <= CO2_COLOR * 3)
 	{
-		return 4;
+		return 30;
 	}
-	else if(colorCO2 <= 0.25)
+	else if(colorCO2 <= CO2_COLOR * 4)
 	{
-		return 5;
+		return 40;
 	}
-	else if(colorCO2 <= 0.3)
+	else if(colorCO2 <= CO2_COLOR * 5)
 	{
-		return 6;
+		return 50;
 	}
-	else if(colorCO2 <= 0.35)
+	else if(colorCO2 <= CO2_COLOR * 6)
 	{
-		return 7;
+		return 60;
 	}
-	else if(colorCO2 <= 0.4)
+	else if(colorCO2 <= CO2_COLOR * 7)
 	{
-		return 8;
+		return 70;
 	}
-	else if(colorCO2 <= 0.45)
+	else if(colorCO2 <= CO2_COLOR * 8)
 	{
-		return 9;
+		return 80;
+	}
+	else if(colorCO2 <= CO2_COLOR * 9)
+	{
+		return 90;
 	}
 	else
 	{
-		return 10;
+		return 100;
 	} // end if
 } // end CO2Color
 
@@ -181,106 +189,142 @@ function MoneyColor(colorMoney)
 	{
 		return 0;
 	}
-	else if(colorMoney <= 500)
+	else if(colorMoney <= MONEY_COLOR)
 	{
-		return 1;
+		return 10;
 	}
-	else if(colorMoney <= 1000)
+	else if(colorMoney <= MONEY_COLOR * 2)
 	{
-		return 2;
+		return 20;
 	}
-	else if(colorMoney <= 1500)
+	else if(colorMoney <= MONEY_COLOR * 3)
 	{
-		return 3;
+		return 30;
 	}
-	else if(colorMoney <= 2000)
+	else if(colorMoney <= MONEY_COLOR * 4)
 	{
-		return 4;
+		return 40;
 	}
-	else if(colorMoney <= 2500)
+	else if(colorMoney <= MONEY_COLOR * 5)
 	{
-		return 5;
+		return 50;
 	}
-	else if(colorMoney <= 3000)
+	else if(colorMoney <= MONEY_COLOR * 6)
 	{
-		return 6;
+		return 60;
 	}
-	else if(colorMoney <= 3500)
+	else if(colorMoney <= MONEY_COLOR * 7)
 	{
-		return 7;
+		return 70;
 	}
-	else if(colorMoney <= 4000)
+	else if(colorMoney <= MONEY_COLOR * 8)
 	{
-		return 8;
+		return 80;
 	}
-	else if(colorMoney <= 4500)
+	else if(colorMoney <= MONEY_COLOR * 9)
 	{
-		return 9;
+		return 90;
 	}
 	else
 	{
-		return 10;
+		return 100;
 	} // end if
 } // end MoneyColor
 
-// Selects a color based on the input number
-function ColorSelect(colorNum)
+// Converts Coal pounds into a number for the color selection
+function CoalColor(colorCoal)
 {
-	switch(colorNum)
+	if(colorCoal <= 0) // For no or bad data
 	{
-		case 1:
-		{
-			/////// color
-			break;
-		}
-		case 2:
-		{
-			/////// color
-			break;
-		}
-		case 3:
-		{
-			/////// color
-			break;
-		}
-		case 4:
-		{
-			/////// color
-			break;
-		}
-		case 5:
-		{
-			/////// color
-			break;
-		}
-		case 6:
-		{
-			/////// color
-			break;
-		}
-		case 7:
-		{
-			/////// color
-			break;
-		}
-		case 8:
-		{
-			/////// color
-			break;
-		}
-		case 9:
-		{
-			/////// color
-			break;
-		}
-		case 10:
-		{
-			/////// color
-			break;
-		}
-		default:
-		{
-			/////// color
-		}
-	} // end switch
-} // end ColorSelect
+		return 0;
+	}
+	else if(colorCoal <= COAL_COLOR)
+	{
+		return 10;
+	}
+	else if(colorCoal <= COAL_COLOR * 2)
+	{
+		return 20;
+	}
+	else if(colorCoal <= COAL_COLOR * 3)
+	{
+		return 30;
+	}
+	else if(colorCoal <= COAL_COLOR * 4)
+	{
+		return 40;
+	}
+	else if(colorCoal <= COAL_COLOR * 5)
+	{
+		return 50;
+	}
+	else if(colorCoal <= COAL_COLOR * 6)
+	{
+		return 60;
+	}
+	else if(colorCoal <= COAL_COLOR * 7)
+	{
+		return 70;
+	}
+	else if(colorCoal <= COAL_COLOR * 8)
+	{
+		return 80;
+	}
+	else if(colorCoal <= COAL_COLOR * 9)
+	{
+		return 90;
+	}
+	else
+	{
+		return 100;
+	} // end if
+} // end CoalColor
+
+// Converts Average Temperature into a number for the color selection
+function AvgTempColor(colorAvgTemp)
+{
+	if(colorAvgTemp <= 0) // For no or bad data
+	{
+		return 0;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR)
+	{
+		return 10;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 2)
+	{
+		return 20;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 3)
+	{
+		return 30;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 4)
+	{
+		return 40;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 5)
+	{
+		return 50;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 6)
+	{
+		return 60;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 7)
+	{
+		return 70;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 8)
+	{
+		return 80;
+	}
+	else if(colorAvgTemp <= AVG_TEMP_COLOR * 9)
+	{
+		return 90;
+	}
+	else
+	{
+		return 100;
+	} // end if
+} // end AvgTempColor

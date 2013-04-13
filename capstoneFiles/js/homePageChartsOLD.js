@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 
 //pass the chart object to a function that will populat the data
 //and set options and div to be placed in
-drawChart1(new Chart('div3') );	
+drawChart1(new Chart('div1') );	
 drawChart2(new Chart('div1') );
 drawTable(new Chart('div2') );
 	

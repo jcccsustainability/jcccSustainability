@@ -1307,11 +1307,13 @@
        y="422.72461"
        id="text3415"
        xml:space="preserve"
+     
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"><tspan
          x="268.6543"
          y="422.72461"
          id="tspan3417"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">RC</tspan></text>
+         class="building RC"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">RC</tspan> </text>
     <text
        x="331.47473"
        y="450.7489"
@@ -1321,6 +1323,7 @@
          x="331.47473"
          y="450.7489"
          id="tspan3471"
+         class="building NMOCA"
          style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">NMCA</tspan></text>
     <text
        x="364.58743"
@@ -1331,6 +1334,7 @@
          x="364.58743"
          y="368.96716"
          id="tspan3475"
+         class="building LIB"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">LIB</tspan></text>
     <text
        x="489.62698"
@@ -1341,6 +1345,7 @@
          x="489.62698"
          y="451.07867"
          id="tspan3475-7"
+         class="building CC"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">CC</tspan></text>
     <text
        x="457.10004"
@@ -1351,6 +1356,7 @@
          x="457.10004"
          y="367.64005"
          id="tspan3475-0"
+         class="building OCB"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">OCB</tspan></text>
     <text
        x="517.2041"
@@ -1361,6 +1367,7 @@
          x="517.2041"
          y="320"
          id="tspan3475-4"
+         class="building GEB__COM"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">GEB</tspan></text>
     <text
        x="249.21065"
@@ -1371,6 +1378,7 @@
          x="249.21065"
          y="305.41464"
          id="tspan3475-8"
+         class="building CLB"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">CLB</tspan></text>
     <text
        x="397.17276"
@@ -1381,6 +1389,7 @@
          x="397.17276"
          y="312.66251"
          id="tspan3475-45"
+         class="building SCI"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">SCI</tspan></text>
     <text
        x="607.71381"
@@ -1391,6 +1400,7 @@
          x="607.71381"
          y="320"
          id="tspan3475-1"
+         class="building GEB__COM"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">COM</tspan></text>
     <text
        x="703.83002"
@@ -1401,6 +1411,7 @@
          x="703.83002"
          y="285.00906"
          id="tspan3475-11"
+         class="building SC"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">SC</tspan></text>
     <text
        x="787.07629"
@@ -1411,6 +1422,7 @@
          x="787.07629"
          y="240.48216"
          id="tspan3475-76"
+         class="building GYM"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">GYM</tspan></text>
     <text
        x="565.99451"
@@ -1421,6 +1433,7 @@
          x="560"
          y="195.106"
          id="tspan3475-2"
+         class="building ATB"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">ATB</tspan></text>
     <text
        x="474.07062"
@@ -1431,6 +1444,7 @@
          x="474.07062"
          y="243.2"
          id="tspan3475-22"
+         class="building CSB"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">CSB</tspan></text>
     <text
        x="423.15891"
@@ -1441,6 +1455,7 @@
          x="423.15891"
          y="109.54608"
          id="tspan3475-18"
+         class="building WLB"
          style="font-size:20px">WLB</tspan></text>
     <text
        x="643.06909"
@@ -1451,6 +1466,7 @@
          x="643.06909"
          y="137.83035"
          id="tspan3475-79"
+         class="building ITC"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">ITC</tspan></text>
     <text
        x="745.24609"
@@ -1461,6 +1477,7 @@
          x="745.24609"
          y="80.908249"
          id="tspan3475-3"
+         class="building HCDC"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">HCDC</tspan></text>
     <text
        x="903.99152"
@@ -1471,6 +1488,7 @@
          x="903.99152"
          y="97.1717"
          id="tspan3475-113"
+         class="building HSC"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">HSC</tspan></text>
     <text
        x="882.54791"
@@ -1481,6 +1499,7 @@
          x="882.54791"
          y="173.62071"
          id="tspan3475-42"
+         class="building PA"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">PA</tspan></text>
     <text
        x="927.32611"
@@ -1491,5 +1510,6 @@
          x="927.32611"
          y="244.60347"
          id="tspan3475-9"
+         class="building WH"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">WH</tspan></text>
   </g></svg>

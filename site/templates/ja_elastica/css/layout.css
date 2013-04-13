@@ -76,10 +76,15 @@
 .grid-tripple {
   width: 720px;
 }
-
+.grid-big {
+  width: 960px;
+}
+.grid-100 {
+ width: 100% !important;
+}
 .ja-masonry .custom,
 .grid-double .custom,
-.grid-tripple .custom {
+.grid-tripple  .custom {
   width: auto;
 }
 
